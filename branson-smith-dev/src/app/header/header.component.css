@@ -182,4 +182,8 @@ Header links / Menu
     .bs-logo-desktop {
         display: none;
     }
+
+    .link-options {
+        display: none;
+    }
 }
