@@ -1,0 +1,36 @@
+
+<div class="tag one" *ngIf="tag.scheme == 1 && enabled" (click)="toggleEnabled()">
+    <div class="tag-text">
+        {{tag.text}}
+    </div>
+</div>
+
+<div class="tag two" *ngIf="tag.scheme == 2 && enabled" (click)="toggleEnabled()">
+    <div class="tag-text">
+        {{tag.text}}
+    </div>
+</div>
+
+<div class="tag three" *ngIf="tag.scheme == 3 && enabled" (click)="toggleEnabled()">
+    <div class="tag-text">
+        {{tag.text}}
+    </div>
+</div>
+
+<div class="tag four" *ngIf="tag.scheme == 4 && enabled" (click)="toggleEnabled()">
+    <div class="tag-text">
+        {{tag.text}}
+    </div>
+</div>
+
+<div class="tag five" *ngIf="tag.scheme == 5 && enabled" (click)="toggleEnabled()">
+    <div class="tag-text">
+        {{tag.text}}
+    </div>
+</div>
+
+<div class="tag disabled" *ngIf="enabled === false" (click)="toggleEnabled()">
+    <div class="tag-text">
+        {{tag.text}}
+    </div>
+</div>

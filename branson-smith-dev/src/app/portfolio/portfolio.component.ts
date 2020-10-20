@@ -38,10 +38,10 @@ export class PortfolioComponent implements OnInit {
 
   tags = [
     { scheme: 1, text: 'Front End' },
-    { scheme: 3, text: 'Back End' },
-    { scheme: 5, text: 'Dev Ops' },
-    { scheme: 7, text: 'Mobile' },
-    { scheme: 9, text: 'Non-Web' }
+    { scheme: 2, text: 'Back End' },
+    { scheme: 3, text: 'Dev Ops' },
+    { scheme: 4, text: 'Mobile' },
+    { scheme: 5, text: 'Non-Web' }
   ];
 
   constructor(

@@ -23,9 +23,17 @@ app-root {
     --content-font-color: #dedede;
     --content-font-color-b: #ffffff;
 
-    --accent-color:  #0ba77d;
+
+    --accent-color:    #0ba77d;
+    --accent-color-b:  #0eb98c;
+    --accent-color-b2: #14dda8;
+    --accent-color-b3: #18f5ba;
     --accent-color-d:  #09916c;
-    --accent-color-d2: #021f17;
+    --accent-color-d2: #077457;
+    --accent-color-d3: #05684d;
+    --accent-color-d4: #034130;
+    --accent-color-d5: #021f17;
+    --accent-color-d6: #010c09;
 
     --contrast-color: #ca0852;
     --contrast-color-d: #a80241;
