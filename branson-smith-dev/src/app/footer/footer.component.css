@@ -1,0 +1,10 @@
+
+.footer {
+    width: 100%;
+    height: fit-content;
+    min-height: 50px;
+    border-top: 1px solid black;
+    position: fixed;
+    bottom: 0px;
+    background-color: var(--primary-color-d);
+}

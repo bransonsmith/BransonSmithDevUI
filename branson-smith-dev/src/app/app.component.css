@@ -1,0 +1,6 @@
+.app-content {
+    width: 100%;
+    height: fit-content;
+    min-height: 100px;
+    background-color: var(--background);
+}

@@ -1,0 +1,46 @@
+<div class="header">
+    <div class="home-mobile" (click)="goToTarget('home')">
+        <i class="material-icons">home</i>
+    </div>
+    <div class="home-desktop" (click)="goToTarget('home')">
+        <img class="bs-logo-desktop" src="../../assets/bs-logo-transparent-zoom.png" alt="Branson Smith Logo">
+    </div>
+
+    <div class="home-links">
+        <ol class="link-options">
+            <li class="link-option-base" (click)="goToTarget(linkOption.target)" *ngFor="let linkOption of menuOptions">
+                <div *ngIf="!linkOption.accented" class="link-option-fill">
+                    <div class="link-option-content">{{linkOption.text}}</div>
+                </div>
+                <div *ngIf="linkOption.accented" class="accented-link-option-fill">
+                    <div class="link-option-content">{{linkOption.text}}</div>
+                </div>
+            </li>
+        </ol>
+    </div>
+
+    <div class="hub-mobile" #container>
+        <img class="bs-logo" src="../../assets/bs-logo-transparent.png" alt="Branson Smith Logo">
+        <i *ngIf="!isMenuExpanded" class="material-icons expand" #expandButton>expand_more</i>
+    </div>
+
+    <div *ngIf="isMenuExpanded" class="expanded-menu">
+        <ol class="menu-options">
+            <li class="menu-option-base" (click)="goToTarget(menuOption.target)" *ngFor="let menuOption of menuOptions">
+                <div *ngIf="!menuOption.accented" class="menu-option-fill">
+                    <div class="menu-option-content">{{menuOption.text}}</div>
+                </div>
+                <div *ngIf="menuOption.accented" class="accented-menu-option-fill">
+                    <div class="menu-option-content">{{menuOption.text}}</div>
+                </div>
+            </li>
+        </ol>
+        <div class="menu-footer">
+            <i class="material-icons less">expand_less</i>
+        </div>
+    </div>
+
+    <div class="user" (click)="goToTarget('user')">
+        <i class="material-icons">person</i>
+    </div>
+</div>
