@@ -41,7 +41,11 @@ app-portfolio-project-preview {
     }
 
     .projects {
-        width: calc(100%);
+        width: 100%;
         margin: auto;
+    }
+
+    app-portfolio-project-preview {
+        width: calc(100% - (var(--portfolio-margin) * 2));
     }
 }

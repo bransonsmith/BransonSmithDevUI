@@ -11,7 +11,6 @@ export class PortfolioCtaBoxComponent implements OnInit {
   @Input() title: string;
   @Input() text: string;
   @Input() buttonText: string;
-  @Input() altStyle: boolean;
 
   constructor(
     private router: Router
