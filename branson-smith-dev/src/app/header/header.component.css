@@ -1,0 +1,185 @@
+/* ############################################
+    Base Header
+############################################ */
+.header {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    max-height: 50px;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: row;
+    overflow-y: visible;
+    border-bottom: 1px solid black;
+    color: var(--header-font-color);
+}
+.home-mobile {
+    margin: auto;
+    margin-left: 10px;
+}
+.user {
+    margin: auto;
+    margin-right: 10px;
+}
+.hub-mobile {
+    height: 70px;
+    width: 70px;
+    margin-top: 0px;
+    border-radius: 100%;
+    border-bottom: 1px solid black;
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+}
+.hub-mobile:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-d);
+}
+.bs-logo {
+    height: 70px;
+    width: 70px;
+    margin: auto auto 0px auto;
+}
+.expand {
+    position: fixed;
+    top: 50px;
+    left: calc(50% - 12px);
+}
+
+/* ############################################
+Header links / Menu
+############################################ */
+.expanded-menu {
+    position: fixed;
+    top: 50px;
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    left: calc(50% - 100px);
+    color: var(--header-font-color);
+}
+.menu-options {
+    width: 100%;
+    margin: 0px auto 0px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid black;
+    border-top: 0px;
+}
+.menu-option-base {
+    border-bottom: 1px solid black;
+    height: 60px;
+    width: 100%;
+    display: flex;
+}
+.menu-option-fill {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: var(--primary-color);
+}
+.menu-option-fill:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-d);
+}
+.accented-menu-option-fill {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    background-color: var(--accent-color);
+    color: var(--primary-color);
+}
+.accented-menu-option-fill:hover {
+    cursor: pointer;
+    background-color: var(--accent-color-d);
+}
+.menu-option-content {
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+.menu-footer {
+    height: 30px;
+    width: 100%;
+    background-color: var(--primary-color-d);
+    border-bottom-left-radius: 6px;
+    border-bottom-right-radius: 6px;
+    border: 1px solid black;
+    border-top: 0px;
+    display: flex;
+    flex-direction: row;
+}
+.menu-footer:hover {
+    cursor: pointer;
+    background-color: var(--primary-color-d);
+}
+.less {
+    margin: auto;
+}
+
+@media screen and (min-width: 765px) {
+    .home-mobile, .hub-mobile {
+        display: none;
+    }
+
+    .bs-logo-desktop {
+        height: 40px;
+        width: 50px;
+        margin: 5px 0px 5px 20px;
+    }.bs-logo-desktop:hover {
+        cursor: pointer;
+    }
+
+/* ################################################
+    Links
+##################################################*/
+    .link-options {
+        width: fit-content;
+        margin: auto auto auto 20px;
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        border-left: 1px solid black;
+    }
+    .link-option-base {
+        height: 100%;
+        width: 150px;
+        display: flex;
+        border-right: 1px solid black;
+    }
+    .link-option-fill {
+        height: 100%;
+        width: 100%;
+        display: flex;
+    }
+    .link-option-fill:hover {
+        cursor: pointer;
+        background-color: var(--primary-color-d);
+    }
+    .accented-link-option-fill {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        background-color: var(--accent-color);
+        color: var(--primary-color);
+    }
+    .accented-link-option-fill:hover {
+        cursor: pointer;
+        background-color: var(--accent-color-d);
+    }
+    .link-option-content {
+        width: fit-content;
+        height: fit-content;
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 765px) {
+    .bs-logo-desktop {
+        display: none;
+    }
+}
