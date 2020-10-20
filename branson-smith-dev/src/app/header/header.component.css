@@ -128,9 +128,9 @@ Header links / Menu
     }
 
     .bs-logo-desktop {
-        height: 40px;
+        height: 30px;
         width: 50px;
-        margin: 5px 0px 5px 20px;
+        margin: 7px 0px 5px 20px;
     }.bs-logo-desktop:hover {
         cursor: pointer;
     }
