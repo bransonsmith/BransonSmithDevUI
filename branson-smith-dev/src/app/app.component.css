@@ -1,6 +1,16 @@
 .app-content {
     width: 100%;
-    height: fit-content;
     min-height: 100px;
     background-color: var(--background);
+    padding-top: 50px;
+}
+
+app-footer {
+    position: absolute;
+    bottom: 0px;
+    margin-top: auto;
+    margin-bottom: 0px;
+    width: 100%;
+    height: fit-content;
+    min-height: 50px;
 }

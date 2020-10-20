@@ -10,6 +10,10 @@ body {
     padding: 0;
     background-color: var(--background);
 }
+app-root {
+    display: flex;
+    flex-direction: column;
+}
 
 :root {
     --primary-color: #161616;
@@ -21,7 +25,13 @@ body {
     --accent-color-d:  #09916c;
     --accent-color-d2: #021f17;
 
-    --background: #222223;
+    --background:   #222223;
+    --background-d: #1A1A1B;
+    --background-d2: #111113;
+
+    --portfolio-meta-column-width: 220px;
+    --portfolio-margin: 20px;
+    --portfolio-border-radius: 5px;
 }
 
 ol, ul, li {
@@ -29,3 +39,14 @@ ol, ul, li {
     margin: 0px;
     padding: 0px;
 }
+
+button {
+    border: none;
+    box-shadow: none;
+    margin: none;
+    padding: none;
+} button:hover {
+    cursor: pointer;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.563);
+}
+
