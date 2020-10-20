@@ -1,1 +1,30 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+@import url("https://fonts.googleapis.com/icon?family=Material+Icons");
+
+html, body { 
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+}
+body {
+    margin: 0;
+    padding: 0;
+    background-color: var(--background);
+}
+
+:root {
+    --primary-color: #161616;
+    --primary-color-d: #101010;
+
+    --header-font-color: #888888;
+
+    --accent-color:  #0ba77d;
+    --accent-color-d:  #09916c;
+
+    --background: #222223;
+}
+
+ol, ul, li {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+}
