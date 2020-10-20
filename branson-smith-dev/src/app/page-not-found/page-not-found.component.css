@@ -15,15 +15,6 @@
     opacity: .6;
 }
 
-.background-image {
-    position: absolute;
-    top: 200px;
-    opacity: .1;
-    height: 60%;
-    width: auto;
-    z-index: 0;
-}
-
 .page-not-found-content {
     font-size: 24px;
     max-width: 80%;

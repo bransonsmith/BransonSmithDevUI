@@ -1,0 +1,96 @@
+.home {
+    height: fit-content;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    padding-top: 50px;
+}
+
+.hero-image {
+    position: absolute;
+    top: 100px;
+    max-width: 80%;
+    max-height: 700px;
+    opacity: .16;
+    margin: 5% auto 0px 5%;
+}
+
+.content {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 80%;
+    width: 800px;
+    height: 350px;
+    color: white;
+    margin: 5% 0px 0px 10%;
+}
+
+.text-box {
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    width: fit-content;
+    color: white;
+    margin: 10% auto auto auto;
+    height: 100%;
+    width: 100%;
+}
+
+.accented {
+    color: var(--accent-color);
+}
+.title {
+    font-size: 40px;
+    padding: 10px;
+    margin: 0px auto 20px;
+}
+.tag-line {
+    font-size: 26px;
+    padding: 4px 10px;
+    margin: 0px auto;
+}
+
+.lets-go-button {
+    width: 240px;
+    height: 76px;
+    display: flex;
+    flex-direction: row;
+    background: linear-gradient(160deg, var(--accent-color), #42cf84);
+    border-radius: 6px;
+    color: #FEFEFE;
+    margin: auto auto auto auto;
+    border: 2px solid #000000;
+}
+.lets-go-button:hover {
+    cursor: pointer;
+    box-shadow: 0px 8px 5px rgba(0, 0, 0, 0.582);
+}
+
+.button-content {
+    display: flex;
+    flex-direction: row;
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+.button-text {
+    font-size: 20px;
+    height: fit-content;
+    width: fit-content;
+    margin: auto auto auto 20px;
+}
+
+i {
+    margin-left: 25px;
+}
+
+@media screen and (max-width: 765px) {
+   .title {
+       text-align: center;
+   }
+   .tag-line {
+       text-align: center;
+   }
+}

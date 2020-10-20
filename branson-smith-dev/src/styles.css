@@ -15,10 +15,11 @@ body {
     --primary-color: #161616;
     --primary-color-d: #101010;
 
-    --header-font-color: #888888;
+    --header-font-color: #cddad5;
 
     --accent-color:  #0ba77d;
     --accent-color-d:  #09916c;
+    --accent-color-d2: #021f17;
 
     --background: #222223;
 }
