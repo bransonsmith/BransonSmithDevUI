@@ -1,0 +1,17 @@
+<div class="cta-box" *ngIf="!altStyle">
+    <div class="cta-title">
+        <div class="cta-title-text">
+            {{title}}
+        </div>
+    </div>
+    <div class="cta-text">
+        {{text}}
+    </div>
+    <button class="cta-button" (click)="goTo('contact')">
+        <div class="cta-button-text">{{buttonText}}</div>
+    </button>
+    
+    <button class="cta-button alt" (click)="goTo('about')">
+        <div class="cta-button-text">About Me</div>
+    </button>
+</div>

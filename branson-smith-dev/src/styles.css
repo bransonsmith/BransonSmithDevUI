@@ -20,10 +20,16 @@ app-root {
     --primary-color-d: #101010;
 
     --header-font-color: #cddad5;
+    --content-font-color: #dedede;
+    --content-font-color-b: #ffffff;
 
     --accent-color:  #0ba77d;
     --accent-color-d:  #09916c;
     --accent-color-d2: #021f17;
+
+    --contrast-color: #ca0852;
+    --contrast-color-d: #a80241;
+    --contrast-color-d2: #94023a;
 
     --background:   #222223;
     --background-d: #1A1A1B;

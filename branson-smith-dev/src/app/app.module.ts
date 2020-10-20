@@ -12,6 +12,7 @@ import { PortfolioProjectPreviewComponent } from './portfolio-project-preview/po
 import { PortfolioTagComponent } from './portfolio-tag/portfolio-tag.component';
 import { PortfolioTagsComponent } from './portfolio-tags/portfolio-tags.component';
 import { PortfolioMetaColumnComponent } from './portfolio-meta-column/portfolio-meta-column.component';
+import { PortfolioCtaBoxComponent } from './portfolio-cta-box/portfolio-cta-box.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,8 @@ import { PortfolioMetaColumnComponent } from './portfolio-meta-column/portfolio-
     PortfolioProjectPreviewComponent,
     PortfolioTagComponent,
     PortfolioTagsComponent,
-    PortfolioMetaColumnComponent
+    PortfolioMetaColumnComponent,
+    PortfolioCtaBoxComponent
   ],
   imports: [
     BrowserModule,
