@@ -35,6 +35,9 @@ app-root {
     --background-d: #1A1A1B;
     --background-d2: #111113;
 
+    --border-color: #000003;
+    --border-color-b4: #555558; 
+
     --portfolio-meta-column-width: 220px;
     --portfolio-margin: 20px;
     --portfolio-border-radius: 5px;
