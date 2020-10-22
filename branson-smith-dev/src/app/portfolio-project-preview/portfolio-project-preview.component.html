@@ -1,0 +1,24 @@
+
+<div class="project">
+    <div class="title-section">
+        <div class="title-text">
+            {{project.title}}
+        </div>
+    </div>
+    <img class="image" src="../../../assets/{{project.title}}.PNG">
+    <div class="text-section">
+        <div class="text">
+            {{project.text}}
+        </div>
+        <div class="links">
+            <div class="link-button" (click)="goToLink(project.examplelink)">
+                <div class="code-label">demo:</div>
+                <i class="material-icons go-to-project">fact_check</i>
+            </div>
+            <div class="link-button" (click)="goToLink(project.codelink)">
+                <div class="code-label">code:</div>
+                <img class="github-link" src="../../../assets/gh-icon.png"/>
+            </div>
+        </div>
+    </div>
+</div>

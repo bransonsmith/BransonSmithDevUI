@@ -3,7 +3,6 @@
     position: fixed;
     width: var(--portfolio-meta-column-width);
     height: 98%;
-    padding-bottom: var(--portfolio-margin);
     margin: 0px;
     display: flex;
     flex-direction: column;

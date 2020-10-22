@@ -2,7 +2,7 @@
     <div class="center">
         <app-portfolio-meta-column [tags]="tags"></app-portfolio-meta-column>
 
-        <div class="projects">
+        <div class="projects" *ngIf="projects">
             <app-portfolio-project-preview 
                 *ngFor="let project of projects"
                 [project]="project">
