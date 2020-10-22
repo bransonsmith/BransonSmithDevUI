@@ -1,0 +1,14 @@
+.tag-filters {
+    position: fixed;
+    width: 200px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+
+app-portfolio-tag {
+    width: 75%;
+    height: 36px;
+    margin: 0px auto 16px;
+    display: flex;
+}

@@ -1,0 +1,13 @@
+<div class="new-portfolio">
+    <div class="center">
+        <app-portfolio-meta-column [tags]="tags"></app-portfolio-meta-column>
+
+        <div class="projects" *ngIf="projects">
+            <app-portfolio-project-preview 
+                *ngFor="let project of projects"
+                [project]="project">
+            </app-portfolio-project-preview>
+        </div>
+
+    </div>
+</div>

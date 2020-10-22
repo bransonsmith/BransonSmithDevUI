@@ -1,0 +1,110 @@
+.project {
+    width: 100%;
+    min-height: 400px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+}
+.expanded {
+    height: 800px;
+}
+
+.expand-button {
+    width: 100%;
+    height: 48px;
+    margin: auto auto 0px;
+    border-top: 1px solid #000003;
+    background: linear-gradient(170deg, #46c793, #0bac6c);
+    display: flex;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+img {
+    max-width: 70%;
+    margin: 20px auto;
+}
+
+.expand-text {
+    width: fit-content;
+    height: fit-content;
+    display: flex;
+    margin: auto;
+}
+
+.title-section {
+    height: 50px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.title-text {
+    font-size: 20px;
+    letter-spacing: .25px;
+    color: #DEDEDE;
+    margin: auto auto auto 16px;
+    height: fit-content;
+    width: fit-content;
+}
+
+.text-section {
+    height: fit-content;
+    min-height: 80px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    background: linear-gradient(340deg, rgba(17, 90, 62, 0.212), rgba(12, 80, 54, 0.164));
+    margin: 30px auto;
+}
+
+.text {
+    font-size: 16px;
+    color: #CDCDCD;
+    height: fit-content;
+    width: fit-content;
+    margin: 15px 10%;
+}
+
+.links {
+    width: fit-content;
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+    margin: 2px 20px 8px auto;
+}
+
+.link-button {
+    height: 90%;
+    width: auto;
+    background-color: #555558;
+    display: flex;
+    border-radius: 4px;
+    margin: auto 20px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.691);
+}
+.link-button:hover {
+    cursor: pointer;
+    background-color: #39393C;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.691);
+}
+
+.github-link {
+    margin: auto 14px auto auto;
+    height: 90%;
+    width: auto;
+}
+
+.code-label {
+    color: #FEFEFE;
+    margin: auto 10px auto 14px;
+}
+
+.go-to-project {
+    color: #FEFEFE;
+    margin: auto 9px auto auto;
+    font-size: 18px;
+}

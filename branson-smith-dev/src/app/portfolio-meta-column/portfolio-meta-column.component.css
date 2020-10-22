@@ -1,0 +1,32 @@
+
+.left-col {
+    position: fixed;
+    width: var(--portfolio-meta-column-width);
+    height: 98%;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    border-right: solid 1px var(--border-color);
+}
+
+app-portfolio-tags {
+    width: 90%;
+    height: 220px;
+    margin: 0px auto var(--portfolio-margin);
+}
+
+.tag-title {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+.tag-title-text {
+    color: var(--accent-color);
+    text-shadow: 0px 1px var(--border-color);
+    font-size: 22px;
+    width: 70%;
+    border-top: 1px solid var(--border-color-b4);
+    padding-top: 10px;
+    margin: calc(var(--portfolio-margin) * 2) auto var(--portfolio-margin);
+}

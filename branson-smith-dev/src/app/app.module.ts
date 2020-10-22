@@ -6,7 +6,14 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { HomeComponent } from './home/home.component';
+import { HttpClient, HttpHandler, HttpClientModule } from '@angular/common/http';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
+import { PortfolioProjectPreviewComponent } from './portfolio-project-preview/portfolio-project-preview.component';
+import { PortfolioTagComponent } from './portfolio-tag/portfolio-tag.component';
+import { PortfolioTagsComponent } from './portfolio-tags/portfolio-tags.component';
+import { PortfolioMetaColumnComponent } from './portfolio-meta-column/portfolio-meta-column.component';
+import { PortfolioCtaBoxComponent } from './portfolio-cta-box/portfolio-cta-box.component';
 
 @NgModule({
   declarations: [
@@ -14,11 +21,18 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    PortfolioComponent,
+    PortfolioProjectPreviewComponent,
+    PortfolioTagComponent,
+    PortfolioTagsComponent,
+    PortfolioMetaColumnComponent,
+    PortfolioCtaBoxComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

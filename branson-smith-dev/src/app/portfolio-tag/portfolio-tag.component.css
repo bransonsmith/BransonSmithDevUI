@@ -1,0 +1,51 @@
+
+.tag {
+    width: 100%;
+    color: var(--content-font-color);
+    border-radius: 2px;
+    /* border-radius: 30px; */
+    display: flex;
+    box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.287);
+}
+.tag:hover {
+    cursor: pointer;
+    background: linear-gradient(170deg, var(--accent-color), var(--accent-color));
+    box-shadow: 2px 2px 4px black;
+}
+
+.tag-text {
+    margin: auto;
+    font-size: 18px;
+    text-shadow: 0px 1px var(--accent-color-d6);
+    height: fit-content;
+}
+
+.five {
+    background: linear-gradient(170deg, var(--accent-color-b2), var(--accent-color-b));
+}
+
+.four {
+    background: linear-gradient(170deg, var(--accent-color-b), var(--accent-color));
+}
+
+.three {
+    background: linear-gradient(170deg, var(--accent-color),   var(--accent-color-d));
+}
+
+.two {
+    background: linear-gradient(170deg, var(--accent-color-d), var(--accent-color-d2));
+}
+
+.one {
+    background: linear-gradient(170deg, var(--accent-color-d2), var(--accent-color-d3));
+}
+
+.disabled {
+    background: linear-gradient(170deg, #71857d, #393d3b);
+    text-decoration: line-through;
+}
+
+.disabled:hover {
+    background: linear-gradient(170deg, #46524d, #2c312e);
+    text-decoration: line-through;
+}

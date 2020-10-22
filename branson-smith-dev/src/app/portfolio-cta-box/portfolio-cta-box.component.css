@@ -1,0 +1,60 @@
+
+.cta-box {
+    width: 70%;
+    height: fit-content;
+    margin: calc(var(--portfolio-margin) * 2) auto 0px auto;
+    background-color: var(--background-d2);
+    display: flex;
+    flex-direction: column;
+    border-radius: var(--portfolio-border-radius);
+    padding: var(--portfolio-margin);
+}
+
+.cta-title {
+    height: fit-content;
+    display: flex;
+    width: 100%;
+    margin: var(--portfolio-margin) auto 0px;
+}
+.cta-title-text {
+    color: var(--content-font-color-b);
+    width: fit-content;
+    margin: auto;
+    font-size: 20px;
+    text-shadow: 0px 1px var(--content-font-color-b);
+}
+
+.cta-text {
+    width: 80%;
+    height: fit-content;
+    color: var(--content-font-color);
+    font-size: 14px;
+    margin: var(--portfolio-margin) auto;
+    text-align: center;
+}
+
+.cta-button {
+    height: fit-content;
+    width: 90%;
+    margin: calc(var(--portfolio-margin) * .5) auto auto;
+    background: linear-gradient(15deg, var(--contrast-color-d), var(--contrast-color));
+    border-radius: var(--portfolio-border-radius);
+    display: flex;
+}
+.cta-button:hover {
+    cursor: pointer;
+    background: linear-gradient(15deg, var(--contrast-color-d2), var(--contrast-color-d));
+}
+.alt {
+    background: linear-gradient(15deg, var(--accent-color-d), var(--accent-color));
+}
+.alt:hover {
+    background: linear-gradient(15deg, var(--accent-color-d5), var(--accent-color-d));
+}
+.cta-button-text {
+    color: var(--content-font-color-b);
+    width: fit-content;
+    height: fit-content;
+    margin: calc(var(--portfolio-margin) * .5) auto;
+    font-size: 18px;
+}

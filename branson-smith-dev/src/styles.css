@@ -10,18 +10,48 @@ body {
     padding: 0;
     background-color: var(--background);
 }
+app-root {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
 
 :root {
     --primary-color: #161616;
     --primary-color-d: #101010;
 
     --header-font-color: #cddad5;
+    --content-font-color: #dedede;
+    --content-font-color-b: #ffffff;
 
-    --accent-color:  #0ba77d;
+
+    --accent-color:    #0ba77d;
+    --accent-color-b:  #0eb98c;
+    --accent-color-b2: #14dda8;
+    --accent-color-b3: #18f5ba;
     --accent-color-d:  #09916c;
-    --accent-color-d2: #021f17;
+    --accent-color-d2: #077457;
+    --accent-color-d3: #05684d;
+    --accent-color-d4: #034130;
+    --accent-color-d5: #021f17;
+    --accent-color-d6: #010c09;
 
-    --background: #222223;
+    --contrast-color: #ca0852;
+    --contrast-color-d: #a80241;
+    --contrast-color-d2: #94023a;
+
+    --background:   #2C2C2E;
+    --background-d: #212123;
+    --background-d2: #111113;
+
+    --border-color: #000003;
+    --border-color-b4: #555558; 
+
+    --portfolio-meta-column-width: 220px;
+    --portfolio-margin: 20px;
+    --portfolio-border-radius: 5px;
+
+    --header-height: 50px;
 }
 
 ol, ul, li {
@@ -29,3 +59,14 @@ ol, ul, li {
     margin: 0px;
     padding: 0px;
 }
+
+button {
+    border: none;
+    box-shadow: none;
+    margin: none;
+    padding: none;
+} button:hover {
+    cursor: pointer;
+    box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.563);
+}
+

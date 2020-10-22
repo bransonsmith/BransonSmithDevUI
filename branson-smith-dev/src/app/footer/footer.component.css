@@ -4,7 +4,5 @@
     height: fit-content;
     min-height: 50px;
     border-top: 1px solid black;
-    position: absolute;
-    bottom: 0;
     background-color: var(--primary-color-d);
 }
