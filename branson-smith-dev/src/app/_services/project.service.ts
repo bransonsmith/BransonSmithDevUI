@@ -1,7 +1,18 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { ProjectDto } from '../portfolio-project-preview/portfolio-project-preview.component';
+
+export class ProjectDto {
+  id: string;
+  title: string;
+  codelink: string;
+  examplelink: string;
+  text: string;
+  image: string;
+  codeclicks: number;
+  exampleclicks: number;
+}
+
 
 @Injectable({
   providedIn: 'root'

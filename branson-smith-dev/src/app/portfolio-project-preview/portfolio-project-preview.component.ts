@@ -1,17 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProjectService } from '../_services/project.service';
-
-export class ProjectDto {
-  id: string;
-  title: string;
-  codelink: string;
-  examplelink: string;
-  text: string;
-  image: string;
-  codeclicks: number;
-  exampleclicks: number;
-}
+import { ProjectDto, ProjectService } from '../_services/project.service';
 
 @Component({
   selector: 'app-portfolio-project-preview',

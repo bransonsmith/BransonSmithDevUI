@@ -22,6 +22,7 @@ app-root {
 
     --header-font-color: #cddad5;
     --content-font-color: #dedede;
+    --content-font-color-d: #828282;
     --content-font-color-b: #ffffff;
 
 
@@ -39,6 +40,7 @@ app-root {
     --contrast-color: #ca0852;
     --contrast-color-d: #a80241;
     --contrast-color-d2: #94023a;
+    --red: #b84444;
 
     --background:   #2C2C2E;
     --background-d: #212123;
@@ -65,8 +67,49 @@ button {
     box-shadow: none;
     margin: none;
     padding: none;
+    width: 160px;
+    max-width: 100%;
 } button:hover {
     cursor: pointer;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.563);
 }
 
+form {
+    width: fit-content;
+    max-width: 100%;
+    padding: 20px 40px;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
+
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: fit-content;
+    padding: 10px;
+    max-width: 100%;
+}
+
+label {
+    font-size: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 1px auto auto 6px;
+    color: var(--content-font-color);
+}
+
+input {
+    width: 220px;
+    max-width: 100%;
+    height: 28px;
+    margin: auto auto auto 0px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color-b4);
+    background-color: var(--background-d2);
+    color: var(--content-font-color-d);
+    font-weight: bold;
+    padding-left: 6px;
+}
