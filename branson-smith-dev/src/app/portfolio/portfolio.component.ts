@@ -63,18 +63,18 @@ export class PortfolioComponent implements OnInit {
   }
 
   addProject() {
-    const newProject: ProjectDto = {
-      id: '',
-      title: '',
-      codelink: '',
-      examplelink: '',
-      text: '',
-      image: '',
-      codeclicks: 0,
-      exampleclicks: 0
-    };
-    this.projectService.postProject(newProject).subscribe(createdProject => {
-      this.projects.push(createdProject);
-    });
+    // const newProject: ProjectDto = {
+    //   id: '',
+    //   title: '',
+    //   codelink: '',
+    //   examplelink: '',
+    //   text: '',
+    //   image: '',
+    //   codeclicks: 0,
+    //   exampleclicks: 0
+    // };
+    // this.projectService.postProject(newProject).subscribe(createdProject => {
+    //   this.projects.push(createdProject);
+    // });
   }
 }

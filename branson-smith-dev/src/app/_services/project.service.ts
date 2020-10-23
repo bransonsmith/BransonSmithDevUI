@@ -27,7 +27,11 @@ export class ProjectService {
     return this.http.post<ProjectDto>(this.url, newProject, this.httpOptions);
   }
 
+  updateProject(project): Observable<ProjectDto> {
+    return this.http.put<ProjectDto>(this.url + '/' + project.id, project, this.httpOptions);
+  }
+
   incClick(id, field) {
-    return this.http.put<ProjectDto>(this.url  + '/' + id + '/inc' + field, {}, this.httpOptions);
+    return this.http.put<ProjectDto>(this.url + '/' + id + '/inc' + field, {}, this.httpOptions);
   }
 }

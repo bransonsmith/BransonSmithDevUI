@@ -48,4 +48,20 @@ export class PortfolioProjectPreviewComponent implements OnInit {
       this.router.navigateByUrl(this.project.examplelink);
     }
   }
+
+  updateProject() {
+    // const updatedProj: ProjectDto = {
+    //   id: this.project.id,
+    //   title: 'Career',
+    //   codelink: this.project.codelink,
+    //   examplelink: this.project.examplelink,
+    //   text: 'Here is some sample text about my wonderful career...',
+    //   image: this.project.image,
+    //   codeclicks: this.project.codeclicks,
+    //   exampleclicks: this.project.exampleclicks
+    // };
+    // this.projectService.updateProject(updatedProj).subscribe(
+    //   proj => console.log(proj)
+    // );
+  }
 }
