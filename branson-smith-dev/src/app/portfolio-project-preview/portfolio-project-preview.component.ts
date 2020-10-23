@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
+import { ProjectService } from '../_services/project.service';
 
 export class ProjectDto {
   id: string;
@@ -23,7 +24,8 @@ export class PortfolioProjectPreviewComponent implements OnInit {
   @Input() project: ProjectDto;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private projectService: ProjectService
   ) { }
 
   ngOnInit() {
@@ -35,5 +37,15 @@ export class PortfolioProjectPreviewComponent implements OnInit {
 
   goToLink(link: string) {
     this.router.navigateByUrl(link);
+  }
+
+  incCount(field) {
+    this.projectService.incClick(this.project.id, field).subscribe();
+    if (field === 'code') {
+      this.router.navigateByUrl(this.project.codelink);
+    }
+    if (field === 'demo') {
+      this.router.navigateByUrl(this.project.examplelink);
+    }
   }
 }

@@ -11,11 +11,11 @@
             {{project.text}}
         </div>
         <div class="links">
-            <div class="link-button" (click)="goToLink(project.examplelink)">
+            <div class="link-button" (click)="incCount('demo')">
                 <div class="code-label">demo:</div>
                 <i class="material-icons go-to-project">fact_check</i>
             </div>
-            <div class="link-button" (click)="goToLink(project.codelink)">
+            <div class="link-button" (click)="incCount('code')">
                 <div class="code-label">code:</div>
                 <img class="github-link" src="../../../assets/gh-icon.png"/>
             </div>

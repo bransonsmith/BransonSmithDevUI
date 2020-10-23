@@ -61,4 +61,20 @@ export class PortfolioComponent implements OnInit {
   goTo(loc) {
     this.router.navigateByUrl(loc);
   }
+
+  addProject() {
+    const newProject: ProjectDto = {
+      id: '',
+      title: '',
+      codelink: '',
+      examplelink: '',
+      text: '',
+      image: '',
+      codeclicks: 0,
+      exampleclicks: 0
+    };
+    this.projectService.postProject(newProject).subscribe(createdProject => {
+      this.projects.push(createdProject);
+    });
+  }
 }

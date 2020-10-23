@@ -7,6 +7,12 @@
                 *ngFor="let project of projects"
                 [project]="project">
             </app-portfolio-project-preview>
+
+            <div class="add-project">
+
+                <button (click)="addProject()">Add New Project</button>
+
+            </div>
         </div>
 
     </div>
