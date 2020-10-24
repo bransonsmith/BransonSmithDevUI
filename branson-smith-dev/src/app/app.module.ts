@@ -16,6 +16,7 @@ import { PortfolioTagsComponent } from './portfolio-tags/portfolio-tags.componen
 import { PortfolioMetaColumnComponent } from './portfolio-meta-column/portfolio-meta-column.component';
 import { PortfolioCtaBoxComponent } from './portfolio-cta-box/portfolio-cta-box.component';
 import { UserCreateComponent } from './user-create/user-create.component';
+import { UserLoginComponent } from './user-login/user-login.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { UserCreateComponent } from './user-create/user-create.component';
     PortfolioTagsComponent,
     PortfolioMetaColumnComponent,
     PortfolioCtaBoxComponent,
-    UserCreateComponent
+    UserCreateComponent,
+    UserLoginComponent
   ],
   imports: [
     BrowserModule,

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
-import { UserDto, UserService } from '../_services/user.service';
+import { CreateUserDto, UserDto, UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-user-create',
@@ -47,15 +47,13 @@ export class UserCreateComponent implements OnInit {
         this.validationText += 'You must accept the cookie policy to make an account.';
       }
     } else {
-      const newUser: UserDto = {
+      const newUser: CreateUserDto = {
         username: this.userForm.value.username,
         email: this.userForm.value.email,
-        password: this.userForm.value.password,
-        id: '',
-        logincount: 0,
+        password: this.userForm.value.password
       };
       this.userService.postUser(newUser).subscribe( response =>
-        console.log(response)
+         this.router.navigateByUrl('home')
       );
     }
 

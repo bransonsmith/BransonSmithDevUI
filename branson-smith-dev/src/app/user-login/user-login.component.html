@@ -1,0 +1,20 @@
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)" *ngIf="!loading">
+
+    <div class="form-field">
+        <input id="username" type="text" formControlName="username">
+        <label for="username"> username </label>
+    </div>
+    <div class="form-field">
+        <input id="password" type="password" formControlName="password">
+        <label for="password"> password </label>
+    </div>
+
+    <button type="submit">Log In</button>
+    <div class="validation-text" *ngIf="validationText.length > 0">{{validationText}}</div>
+
+    <button class="new-account-button" (click)="goTo('user/create')">Create New Account</button>
+</form>
+
+<div class="loading" *ngIf="loading">
+    Loading...
+</div>

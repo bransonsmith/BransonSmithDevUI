@@ -2,12 +2,16 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
 
+export class CreateUserDto {
+  username: string;
+  email: string;
+  password: string;
+}
+
 export class UserDto {
   id: string;
   username: string;
   email: string;
-  password: string;
-  logincount: number;
 }
 
 @Injectable({
@@ -30,7 +34,7 @@ export class UserService {
     return this.http.get<UserDto[]>(this.url + '/');
   }
 
-  postUser(newUser): Observable<UserDto> {
+  postUser(newUser: CreateUserDto): Observable<UserDto> {
     return this.http.post<UserDto>(this.url, newUser, this.httpOptions);
   }
 
