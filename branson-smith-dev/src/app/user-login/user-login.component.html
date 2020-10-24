@@ -10,9 +10,14 @@
     </div>
 
     <button class="top-button" type="submit">Log In</button>
-    <div class="validation-text" *ngIf="validationText.length > 0">{{validationText}}</div>
+    
+    <div class="validation-text-container">
+        <div class="validation-text" *ngIf="validationText.length > 0">
+            {{validationText}}
+        </div>
+    </div>
 
-    <button class="new-account-button" (click)="goTo('user/create')">Create New Account</button>
+    <!-- <button class="new-account-button" (click)="goTo('user/create')">Create New Account</button> -->
 </form>
 
 <div class="loading" *ngIf="loading">

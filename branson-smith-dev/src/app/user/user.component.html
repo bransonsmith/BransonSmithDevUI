@@ -1,13 +1,15 @@
-<details open class="login" >
-    <summary>
-        log in
-    </summary>
-    <app-user-login></app-user-login>
-</details>
+<div class="user">
+    <details open class="login" (click)="onClick('logindetails')" id="logindetails">
+        <summary>
+            log in
+        </summary>
+        <app-user-login></app-user-login>
+    </details>
 
-<details class="signup">
-    <summary>
-        sign up
-    </summary>
-    <app-user-create></app-user-create>
-</details>
+    <details class="signup" (click)="onClick('signupdetails')" id="signupdetails">
+        <summary>
+            sign up
+        </summary>
+        <app-user-create></app-user-create>
+    </details>
+</div>

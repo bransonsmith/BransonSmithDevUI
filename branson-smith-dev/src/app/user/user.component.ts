@@ -12,4 +12,11 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  onClick(target) {
+    document.querySelectorAll('details').forEach(detail => {
+      if (detail.getAttribute('id') !== target) {
+          detail.removeAttribute('open');
+      }
+    });
+  }
 }

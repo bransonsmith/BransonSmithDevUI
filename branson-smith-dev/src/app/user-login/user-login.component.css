@@ -45,7 +45,10 @@ input[type='checkbox'] {
 input[type='checkbox']:hover {
     cursor: pointer;
 }
-
+.validation-text-container {
+    height: 26px;
+    display: flex;
+}
 .validation-text {
     color: var(--red);
     font-size: 10px;

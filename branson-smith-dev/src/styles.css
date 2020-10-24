@@ -77,7 +77,7 @@ button {
 }
 details {
     width: 500px;
-    max-width: 100%;
+    max-width: 90%;
     margin: 20px auto 0px;
     background-color: var(--background-d);
     border-radius: 5px;
@@ -93,7 +93,6 @@ summary:hover {
 form {
     width: fit-content;
     max-width: 100%;
-    padding: 20px 40px 40px;
     height: fit-content;
     display: flex;
     flex-direction: column;
