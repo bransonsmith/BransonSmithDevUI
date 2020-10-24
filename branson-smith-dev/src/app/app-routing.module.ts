@@ -3,14 +3,12 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
-import { UserCreateComponent } from './user-create/user-create.component';
-import { UserLoginComponent } from './user-login/user-login.component';
+import { UserComponent } from './user/user.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
   { path: 'portfolio', component: PortfolioComponent },
-  { path: 'user/create', component: UserCreateComponent },
-  { path: 'user/login', component: UserLoginComponent },
+  { path: 'user', component: UserComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

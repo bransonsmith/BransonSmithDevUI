@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    color: var(--content-font-color);
 }
 app-root {
     height: 100%;
@@ -74,11 +75,25 @@ button {
     cursor: pointer;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.563);
 }
-
+details {
+    width: 500px;
+    max-width: 100%;
+    margin: 20px auto 0px;
+    background-color: var(--background-d);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+}
+summary {
+    padding: 10px 20px;
+    color: var(--content-font-color-d);
+}
+summary:hover {
+    cursor: pointer;
+}
 form {
     width: fit-content;
     max-width: 100%;
-    padding: 20px 40px;
+    padding: 20px 40px 40px;
     height: fit-content;
     display: flex;
     flex-direction: column;

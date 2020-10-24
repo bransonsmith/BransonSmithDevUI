@@ -23,6 +23,9 @@
 .user {
     margin: auto;
     margin-right: 10px;
+}.user:hover {
+    cursor: pointer;
+    color: white;
 }
 .hub-mobile {
     height: 70px;

@@ -21,8 +21,8 @@ export class UserLoginComponent implements OnInit {
     private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
-      username: ['', Validators.required],
-      password: ['', Validators.required],
+      loginUsername: ['', Validators.required],
+      loginPassword: ['', Validators.required],
     });
   }
 
@@ -36,15 +36,15 @@ export class UserLoginComponent implements OnInit {
   onSubmit() {
     this.validationText = '';
     if (!this.loginForm.valid) {
-      if (this.loginForm.value.username.length === 0 ) {
+      if (this.loginForm.value.loginUsername.length === 0 ) {
         this.validationText += 'Username is required.';
-      } else if (this.loginForm.value.password === 0) {
+      } else if (this.loginForm.value.loginPassword === 0) {
         this.validationText += 'Password is required.';
       }
     } else {
       const login = {
-        username: this.loginForm.value.username,
-        password: this.loginForm.value.password
+        username: this.loginForm.value.loginUsername,
+        password: this.loginForm.value.loginPassword
       };
       this.loading = true;
       this.loginService.login(login).subscribe(response => {

@@ -9,6 +9,10 @@ button {
     border: 2px solid var(--accent-color);
 }
 
+.top-button {
+    margin-top: 50px;
+}
+
 .new-account-button {
     background-color: var(--background);
     color: var(--accent-color-d2);
