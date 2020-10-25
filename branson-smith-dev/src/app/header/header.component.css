@@ -21,11 +21,29 @@
     margin-left: 10px;
 }
 .user {
+    display: flex;
     margin: auto;
     margin-right: 10px;
 }.user:hover {
     cursor: pointer;
     color: white;
+}
+.username {
+    font-size: 10px;
+    text-decoration: underline;
+    margin: auto 3px 4px 0px;
+}.username:hover {
+    cursor: pointer;
+}
+.logout {
+    color: var(--red);
+    font-size: 10px;
+    text-decoration: underline;
+    margin: auto 3px 6px;
+
+}.logout:hover {
+    cursor: pointer;
+    color: var(--header-font-color);
 }
 .hub-mobile {
     height: 70px;

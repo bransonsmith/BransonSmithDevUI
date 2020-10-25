@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { CookieService } from 'ngx-cookie-service';
 
 export class CreateUserDto {
   username: string;
@@ -27,8 +28,19 @@ export class UserService {
     })
   };
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private cookieService: CookieService
   ) { }
+
+  getCurrentUser(): Observable<UserDto[]> {
+    if (this.cookieService.check('bsdev_token')) {
+      const token = this.cookieService.get('bsdev_token');
+      return this.http.get<UserDto[]>(this.url + `/token/${token}`);
+    } else {
+      this.cookieService.deleteAll();
+      return null;
+    }
+  }
 
   getUsers(): Observable<UserDto[]> {
     return this.http.get<UserDto[]>(this.url + '/');

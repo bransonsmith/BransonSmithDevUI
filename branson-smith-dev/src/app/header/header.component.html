@@ -41,6 +41,8 @@
     </div>
 
     <div class="user" (click)="goToTarget('user')">
+        <div class="username" *ngIf="usernameCookie">{{usernameCookie}}</div>
         <i class="material-icons">person</i>
     </div>
+    <div class="logout" *ngIf="tokenCookie" (click)="logout()">log out</div>
 </div>

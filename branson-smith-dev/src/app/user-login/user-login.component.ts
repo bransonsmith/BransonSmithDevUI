@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
 import { LoginService } from '../_services/login.service';
 import { UserDto, UserService } from '../_services/user.service';
 
@@ -18,6 +19,7 @@ export class UserLoginComponent implements OnInit {
   constructor(
     private formBuilder: FormBuilder,
     private loginService: LoginService,
+    private cookieService: CookieService,
     private router: Router
   ) {
     this.loginForm = this.formBuilder.group({
@@ -48,8 +50,11 @@ export class UserLoginComponent implements OnInit {
       };
       this.loading = true;
       this.loginService.login(login).subscribe(response => {
-        this.loading = false;
+        console.log(response);
+        this.cookieService.set('bsdev_token', response.token);
+        this.cookieService.set('bsdev_username', response.user.username);
         this.router.navigateByUrl('home');
+        window.location.reload();
       });
     }
   }

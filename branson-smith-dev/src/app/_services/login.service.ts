@@ -1,5 +1,6 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
 import { Observable } from 'rxjs';
 
 @Injectable({
@@ -15,11 +16,15 @@ export class LoginService {
     })
   };
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private cookieService: CookieService
   ) { }
 
   login(login): Observable<any> {
     return this.http.post<any>(this.url, login, this.httpOptions);
   }
 
+  logout() {
+    this.cookieService.deleteAll();
+  }
 }

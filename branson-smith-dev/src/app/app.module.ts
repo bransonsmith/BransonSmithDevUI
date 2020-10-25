@@ -18,6 +18,7 @@ import { PortfolioCtaBoxComponent } from './portfolio-cta-box/portfolio-cta-box.
 import { UserCreateComponent } from './user-create/user-create.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserComponent } from './user/user.component';
+import { CookieService } from 'ngx-cookie-service';
 
 @NgModule({
   declarations: [
@@ -43,7 +44,9 @@ import { UserComponent } from './user/user.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [
+    CookieService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
