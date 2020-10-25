@@ -32,10 +32,10 @@ export class UserService {
     private cookieService: CookieService
   ) { }
 
-  getCurrentUser(): Observable<UserDto[]> {
+  getCurrentUser(): Observable<UserDto> {
     if (this.cookieService.check('bsdev_token')) {
       const token = this.cookieService.get('bsdev_token');
-      return this.http.get<UserDto[]>(this.url + `/token/${token}`);
+      return this.http.get<UserDto>(this.url + `/token/${token}`);
     } else {
       this.cookieService.deleteAll();
       return null;

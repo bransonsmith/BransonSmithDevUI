@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { CookieService } from 'ngx-cookie-service';
+import { UserDto, UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-user',
@@ -7,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
 
-  constructor() { }
+  user: UserDto;
+  constructor(
+    private cookieService: CookieService,
+    private userService: UserService
+  ) { }
 
   ngOnInit() {
+    window.scroll(0, 0);
+    const current = this.userService.getCurrentUser();
+    if (current === null) {
+      this.user = null;
+    } else {
+      current.subscribe(user => {
+        console.log(user);
+        this.user = user;
+      });
+    }
   }
 
   onClick(target) {

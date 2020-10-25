@@ -9,3 +9,12 @@
 .signup {
     padding: 12px 0px;
 }
+
+.profile {
+    display: flex;
+    padding: 40px;
+}
+.profile-text {
+    margin: auto;
+    text-align: center;
+}

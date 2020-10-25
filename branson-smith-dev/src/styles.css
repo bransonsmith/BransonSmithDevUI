@@ -128,3 +128,31 @@ input {
     font-weight: bold;
     padding-left: 6px;
 }
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+.loading {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: .25rem solid #6a9595;
+    border-top-color: var(--accent-color-b);
+    color: var(--accent-color);
+    padding: auto;
+    font-size: 9px;
+    animation: spin 1s infinite linear;
+    margin: auto;
+    display: flex;
+}
+.loading-text {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}

@@ -15,7 +15,7 @@ export class HeaderComponent implements OnInit {
   @ViewChild('expandButton', { static: false }) expandButton;
   isMenuExpanded = false;
   tokenCookie;
-  usernameCookie;
+  username;
 
   menuOptions = [
     { text: 'My Work', target: 'portfolio' },
@@ -39,7 +39,7 @@ export class HeaderComponent implements OnInit {
       this.userService.getCurrentUser().subscribe(user => {
         if (user !== null) {
           this.tokenCookie = this.cookieService.get('bsdev_token');
-          this.usernameCookie = this.cookieService.get('bsdev_username');
+          this.username = user.username;
         }
       });
     }
@@ -60,6 +60,6 @@ export class HeaderComponent implements OnInit {
 
   logout() {
     this.loginService.logout();
-    window.location.reload();
+    location.reload();
   }
 }

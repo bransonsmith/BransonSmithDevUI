@@ -1,4 +1,4 @@
-<div class="user">
+<div class="user" *ngIf="user === null">
     <details open class="login" (click)="onClick('logindetails')" id="logindetails">
         <summary>
             log in
@@ -12,4 +12,10 @@
         </summary>
         <app-user-create></app-user-create>
     </details>
+</div>
+
+<div class="profile" *ngIf="user && user !== null">
+    <div class="profile-text">
+        Welcome, {{user.username}}! Take a look around, mess with some apps, and feel free to contact me with any questions!
+    </div>
 </div>

@@ -53,7 +53,6 @@ export class UserLoginComponent implements OnInit {
         console.log(response);
         this.cookieService.set('bsdev_token', response.token);
         this.cookieService.set('bsdev_username', response.user.username);
-        this.router.navigateByUrl('home');
         window.location.reload();
       });
     }
