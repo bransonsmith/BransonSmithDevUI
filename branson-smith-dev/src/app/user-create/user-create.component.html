@@ -1,4 +1,4 @@
-<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)">
+<form [formGroup]="userForm" (ngSubmit)="onSubmit(userForm.value)" *ngIf="!loading">
 
     <div class="form-field">
         <input id="username" type="text" formControlName="username">
@@ -28,3 +28,7 @@
     <div class="validation-text" *ngIf="validationText.length > 0">{{validationText}}</div>
 
 </form>
+
+<div class="loading" *ngIf="loading">
+    <div class="loading-text"></div>
+</div>

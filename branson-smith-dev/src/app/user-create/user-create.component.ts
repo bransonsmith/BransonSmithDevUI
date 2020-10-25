@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { LoginService } from '../_services/login.service';
 import { CreateUserDto, UserDto, UserService } from '../_services/user.service';
 
 @Component({
@@ -12,10 +14,13 @@ export class UserCreateComponent implements OnInit {
 
   userForm;
   validationText = '';
+  loading = false;
 
   constructor(
     private formBuilder: FormBuilder,
     private userService: UserService,
+    private cookieService: CookieService,
+    private loginService: LoginService,
     private router: Router
   ) {
     this.userForm = this.formBuilder.group({
@@ -52,9 +57,23 @@ export class UserCreateComponent implements OnInit {
         email: this.userForm.value.email,
         password: this.userForm.value.password
       };
-      this.userService.postUser(newUser).subscribe( response =>
-         this.router.navigateByUrl('home')
-      );
+      this.loading = true;
+      this.userService.postUser(newUser).subscribe( userResponse => {
+        if (userResponse.email === 'Failure') {
+          this.loading = false;
+          this.validationText = userResponse.id;
+          return;
+        }
+        const login = {
+          username: newUser.username,
+          password: newUser.password
+        };
+        this.loginService.login(login).subscribe(response => {
+          this.cookieService.set('bsdev_token', response.token);
+          this.cookieService.set('bsdev_username', response.user.username);
+          window.location.reload();
+        });
+      });
     }
 
   }

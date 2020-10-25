@@ -22,7 +22,6 @@ export class UserComponent implements OnInit {
       this.user = null;
     } else {
       current.subscribe(user => {
-        console.log(user);
         this.user = user;
       });
     }
