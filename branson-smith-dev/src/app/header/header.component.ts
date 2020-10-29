@@ -42,6 +42,7 @@ export class HeaderComponent implements OnInit {
           this.username = user.username;
         } else {
           this.cookieService.delete('bsdev_token');
+          this.username = undefined;
         }
       });
     }
@@ -61,7 +62,6 @@ export class HeaderComponent implements OnInit {
   }
 
   logout() {
-    this.loginService.logout();
-    location.reload();
+    this.loginService.logout().subscribe(resp => { this.cookieService.delete('bsdev_token'); location.reload(); });
   }
 }
