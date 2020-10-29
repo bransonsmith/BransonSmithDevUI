@@ -17,14 +17,14 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
-    const current = this.userService.getCurrentUser();
-    if (current === null) {
-      this.user = null;
-    } else {
-      current.subscribe(user => {
+    this.userService.getCurrentUser().subscribe(user => {
+      if (user.email !== 'Failure') {
         this.user = user;
-      });
-    }
+      } else {
+        this.cookieService.delete('bsdev_token');
+        this.user = null;
+      }
+    });
   }
 
   onClick(target) {

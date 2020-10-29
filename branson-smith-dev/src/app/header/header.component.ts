@@ -37,9 +37,11 @@ export class HeaderComponent implements OnInit {
     if (this.cookieService.check('bsdev_token')) {
       this.tokenCookie = this.cookieService.get('bsdev_token');
       this.userService.getCurrentUser().subscribe(user => {
-        if (user !== null) {
+        if (user !== null && user.email !== 'Failure') {
           this.tokenCookie = this.cookieService.get('bsdev_token');
           this.username = user.username;
+        } else {
+          this.cookieService.delete('bsdev_token');
         }
       });
     }

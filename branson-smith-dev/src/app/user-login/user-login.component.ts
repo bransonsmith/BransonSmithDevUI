@@ -51,7 +51,6 @@ export class UserLoginComponent implements OnInit {
       this.loading = true;
       this.loginService.login(login).subscribe(response => {
         this.cookieService.set('bsdev_token', response.token);
-        this.cookieService.set('bsdev_username', response.user.username);
         window.location.reload();
       });
     }

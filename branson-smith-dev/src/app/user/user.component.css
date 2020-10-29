@@ -18,3 +18,8 @@
     margin: auto;
     text-align: center;
 }
+
+a {
+    color: inherit;
+    font-weight: bold;
+}

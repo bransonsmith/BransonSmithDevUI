@@ -26,6 +26,5 @@ export class LoginService {
 
   logout() {
     this.cookieService.delete('bsdev_token');
-    this.cookieService.delete('bsdev_username');
   }
 }

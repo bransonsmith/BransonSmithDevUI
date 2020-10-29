@@ -36,10 +36,12 @@ export class UserService {
   getCurrentUser(): Observable<UserDto> {
     if (this.cookieService.check('bsdev_token')) {
       const token = this.cookieService.get('bsdev_token');
-      return this.http.get<UserDto>(this.url + `/token/${token}`);
+      return this.http.get<UserDto>(this.url + `/token/${token}`).pipe(
+        catchError(this.handleError<UserDto>('getCurrentUser', { email: 'Failure', username: '', id: '' }))
+      );
     } else {
       this.cookieService.deleteAll();
-      return null;
+      return of({ email: 'Failure', username: '', id: '' });
     }
   }
 

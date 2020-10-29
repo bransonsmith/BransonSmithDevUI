@@ -45,6 +45,6 @@
             <div class="username" *ngIf="username">{{username}}</div>
             <i class="material-icons">person</i>
         </div>
-        <div class="logout" *ngIf="tokenCookie" (click)="logout()">log out</div>
+        <div class="logout" *ngIf="username" (click)="logout()">log out</div>
     </div>
 </div>

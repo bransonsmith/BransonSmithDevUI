@@ -19,6 +19,8 @@
 .home-mobile {
     margin: auto;
     margin-left: 10px;
+}.home-mobile:hover {
+    cursor: pointer;
 }
 .user-section {
     height: 100%;
