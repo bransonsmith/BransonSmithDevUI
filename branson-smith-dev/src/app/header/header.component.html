@@ -40,7 +40,11 @@
         </div>
     </div>
 
-    <div class="user" (click)="goToTarget('user')">
-        <i class="material-icons">person</i>
+    <div class="user-section">
+        <div class="user" (click)="goToTarget('user')">
+            <div class="username" *ngIf="username">{{username}}</div>
+            <i class="material-icons">person</i>
+        </div>
+        <div class="logout" *ngIf="username" (click)="logout()">log out</div>
     </div>
 </div>

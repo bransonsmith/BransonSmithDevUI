@@ -19,12 +19,43 @@
 .home-mobile {
     margin: auto;
     margin-left: 10px;
+}.home-mobile:hover {
+    cursor: pointer;
 }
-.user {
+.user-section {
+    height: 100%;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
     margin: auto;
     margin-right: 10px;
 }
+.user {
+    display: flex;
+    margin: 8px auto auto;
+}.user:hover {
+    cursor: pointer;
+    color: white;
+}
+.username {
+    font-size: 10px;
+    text-decoration: underline;
+    margin: auto 3px 4px 0px;
+}.username:hover {
+    cursor: pointer;
+}
+.logout {
+    color: var(--red);
+    font-size: 10px;
+    text-decoration: underline;
+    margin: auto 4px 8px auto;
+}.logout:hover {
+    cursor: pointer;
+    color: var(--header-font-color);
+}
 .hub-mobile {
+    position: fixed;
+    left: calc(50% - 35px);
     height: 70px;
     width: 70px;
     margin-top: 0px;

@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { ProjectDto } from '../portfolio-project-preview/portfolio-project-preview.component';
-import { ProjectService } from '../_services/project.service';
+import { ProjectDto, ProjectService } from '../_services/project.service';
 
 @Component({
   selector: 'app-portfolio',
@@ -60,5 +59,21 @@ export class PortfolioComponent implements OnInit {
 
   goTo(loc) {
     this.router.navigateByUrl(loc);
+  }
+
+  addProject() {
+    // const newProject: ProjectDto = {
+    //   id: '',
+    //   title: '',
+    //   codelink: '',
+    //   examplelink: '',
+    //   text: '',
+    //   image: '',
+    //   codeclicks: 0,
+    //   exampleclicks: 0
+    // };
+    // this.projectService.postProject(newProject).subscribe(createdProject => {
+    //   this.projects.push(createdProject);
+    // });
   }
 }

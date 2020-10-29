@@ -1,16 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Router } from '@angular/router';
-
-export class ProjectDto {
-  id: string;
-  title: string;
-  codelink: string;
-  examplelink: string;
-  text: string;
-  image: string;
-  codeclicks: number;
-  exampleclicks: number;
-}
+import { ProjectDto, ProjectService } from '../_services/project.service';
 
 @Component({
   selector: 'app-portfolio-project-preview',
@@ -23,7 +13,8 @@ export class PortfolioProjectPreviewComponent implements OnInit {
   @Input() project: ProjectDto;
 
   constructor(
-    private router: Router
+    private router: Router,
+    private projectService: ProjectService
   ) { }
 
   ngOnInit() {
@@ -35,5 +26,31 @@ export class PortfolioProjectPreviewComponent implements OnInit {
 
   goToLink(link: string) {
     this.router.navigateByUrl(link);
+  }
+
+  incCount(field) {
+    this.projectService.incClick(this.project.id, field).subscribe();
+    if (field === 'code') {
+      this.router.navigateByUrl(this.project.codelink);
+    }
+    if (field === 'demo') {
+      this.router.navigateByUrl(this.project.examplelink);
+    }
+  }
+
+  updateProject() {
+    // const updatedProj: ProjectDto = {
+    //   id: this.project.id,
+    //   title: 'Career',
+    //   codelink: this.project.codelink,
+    //   examplelink: this.project.examplelink,
+    //   text: 'Here is some sample text about my wonderful career...',
+    //   image: this.project.image,
+    //   codeclicks: this.project.codeclicks,
+    //   exampleclicks: this.project.exampleclicks
+    // };
+    // this.projectService.updateProject(updatedProj).subscribe(
+    //   proj => console.log(proj)
+    // );
   }
 }

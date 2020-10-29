@@ -1,0 +1,21 @@
+<div class="user" *ngIf="user === null">
+    <details open class="login" (click)="onClick('logindetails')" id="logindetails">
+        <summary>
+            log in
+        </summary>
+        <app-user-login></app-user-login>
+    </details>
+
+    <details class="signup" (click)="onClick('signupdetails')" id="signupdetails">
+        <summary>
+            sign up
+        </summary>
+        <app-user-create></app-user-create>
+    </details>
+</div>
+
+<div class="profile" *ngIf="user && user !== null">
+    <div class="profile-text">
+        Welcome, <b>{{user.username}}</b>! Take a look around, mess with some apps, and feel free to <a href="contact">contact me</a> with any questions!
+    </div>
+</div>

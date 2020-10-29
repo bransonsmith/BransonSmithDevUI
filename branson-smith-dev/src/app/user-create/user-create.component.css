@@ -1,0 +1,38 @@
+button {
+    margin: 12px auto 0px;
+    background-color: var(--accent-color-t);
+    height: 38px;
+    width: 160px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--content-font-color);
+    border: 2px solid var(--accent-color);
+}
+
+.accept-box {
+    height: fit-content;
+    width: 300px;
+    max-width: 90%;
+    margin: 10px auto 10px;
+    padding: 8px;
+    font-size: 12px;
+    background-color: var(--background-d);
+    color: var(--content-font-color-d);
+    display: flex;
+    flex-direction: row;
+}
+
+input[type='checkbox'] {
+    width: 16px;
+    height: 16px;
+    margin-bottom: 4px
+}
+input[type='checkbox']:hover {
+    cursor: pointer;
+}
+
+.validation-text {
+    color: var(--red);
+    font-size: 10px;
+    margin: 6px auto;
+}

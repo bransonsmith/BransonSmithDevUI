@@ -1,0 +1,25 @@
+.user {
+    margin: 20px 0px 40px;
+}
+
+.login {
+    padding: 12px 0px;
+}
+
+.signup {
+    padding: 12px 0px;
+}
+
+.profile {
+    display: flex;
+    padding: 40px;
+}
+.profile-text {
+    margin: auto;
+    text-align: center;
+}
+
+a {
+    color: inherit;
+    font-weight: bold;
+}

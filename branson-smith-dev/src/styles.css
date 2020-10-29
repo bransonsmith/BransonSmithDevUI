@@ -9,6 +9,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: var(--background);
+    color: var(--content-font-color);
 }
 app-root {
     height: 100%;
@@ -22,10 +23,12 @@ app-root {
 
     --header-font-color: #cddad5;
     --content-font-color: #dedede;
+    --content-font-color-d: #828282;
     --content-font-color-b: #ffffff;
 
 
     --accent-color:    #0ba77d;
+    --accent-color-t:  #00ff9959;
     --accent-color-b:  #0eb98c;
     --accent-color-b2: #14dda8;
     --accent-color-b3: #18f5ba;
@@ -39,6 +42,7 @@ app-root {
     --contrast-color: #ca0852;
     --contrast-color-d: #a80241;
     --contrast-color-d2: #94023a;
+    --red: #b84444;
 
     --background:   #2C2C2E;
     --background-d: #212123;
@@ -65,8 +69,90 @@ button {
     box-shadow: none;
     margin: none;
     padding: none;
+    width: 160px;
+    max-width: 100%;
 } button:hover {
     cursor: pointer;
     box-shadow: 0px 3px 4px rgba(0, 0, 0, 0.563);
 }
+details {
+    width: 500px;
+    max-width: 90%;
+    margin: 20px auto 0px;
+    background-color: var(--background-d);
+    border-radius: 5px;
+    box-shadow: 3px 3px 3px black;
+}
+summary {
+    padding: 10px 20px;
+    color: var(--content-font-color-d);
+}
+summary:hover {
+    cursor: pointer;
+}
+form {
+    width: fit-content;
+    max-width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+}
 
+.form-field {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    height: fit-content;
+    padding: 10px;
+    max-width: 100%;
+}
+
+label {
+    font-size: 10px;
+    width: fit-content;
+    height: fit-content;
+    margin: 1px auto auto 6px;
+    color: var(--content-font-color);
+}
+
+input {
+    width: 220px;
+    max-width: 100%;
+    height: 28px;
+    margin: auto auto auto 0px;
+    border-radius: 5px;
+    border: 2px solid var(--border-color-b4);
+    background-color: var(--background-d2);
+    color: var(--content-font-color-d);
+    font-weight: bold;
+    padding-left: 6px;
+}
+
+
+@keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+}
+.loading {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    border: .25rem solid #6a9595;
+    border-top-color: var(--accent-color-b);
+    color: var(--accent-color);
+    padding: auto;
+    font-size: 9px;
+    animation: spin 1s infinite linear;
+    margin: auto;
+    display: flex;
+}
+.loading-text {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}

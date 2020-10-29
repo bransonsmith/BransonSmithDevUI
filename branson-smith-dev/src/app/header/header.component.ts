@@ -1,5 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
+import { CookieService } from 'ngx-cookie-service';
+import { LoginService } from '../_services/login.service';
+import { UserService } from '../_services/user.service';
 
 @Component({
   selector: 'app-header',
@@ -11,6 +14,8 @@ export class HeaderComponent implements OnInit {
   @ViewChild('container', { static: false }) container;
   @ViewChild('expandButton', { static: false }) expandButton;
   isMenuExpanded = false;
+  tokenCookie;
+  username;
 
   menuOptions = [
     { text: 'My Work', target: 'portfolio' },
@@ -20,12 +25,26 @@ export class HeaderComponent implements OnInit {
   ];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private cookieService: CookieService,
+    private userService: UserService,
+    private loginService: LoginService
   ) {
     document.addEventListener('click', this.clickHandler.bind(this));
   }
 
   ngOnInit() {
+    if (this.cookieService.check('bsdev_token')) {
+      this.tokenCookie = this.cookieService.get('bsdev_token');
+      this.userService.getCurrentUser().subscribe(user => {
+        if (user !== null && user.email !== 'Failure') {
+          this.tokenCookie = this.cookieService.get('bsdev_token');
+          this.username = user.username;
+        } else {
+          this.cookieService.delete('bsdev_token');
+        }
+      });
+    }
   }
 
   clickHandler(event: any) {
@@ -39,5 +58,10 @@ export class HeaderComponent implements OnInit {
 
   goToTarget(target) {
     this.router.navigateByUrl(target);
+  }
+
+  logout() {
+    this.loginService.logout();
+    location.reload();
   }
 }
