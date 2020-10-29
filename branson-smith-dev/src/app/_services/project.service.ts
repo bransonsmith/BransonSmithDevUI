@@ -43,6 +43,6 @@ export class ProjectService {
   }
 
   incClick(id, field) {
-    return this.http.put<ProjectDto>(this.url + '/' + id + '/inc' + field, {}, this.httpOptions);
+    return this.http.put<ProjectDto>(this.url + '/' + id + '/inc/' + field, {}, this.httpOptions);
   }
 }
