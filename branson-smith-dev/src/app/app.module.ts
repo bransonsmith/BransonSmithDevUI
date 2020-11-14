@@ -19,6 +19,10 @@ import { UserCreateComponent } from './user-create/user-create.component';
 import { UserLoginComponent } from './user-login/user-login.component';
 import { UserComponent } from './user/user.component';
 import { CookieService } from 'ngx-cookie-service';
+import { CategoryFormComponent } from './budget/category-form/category-form.component';
+import { BudgetComponent } from './budget/budget/budget.component';
+import { LabelFormComponent } from './budget/label-form/label-form.component';
+import { AboutComponent } from './about/about/about.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +39,11 @@ import { CookieService } from 'ngx-cookie-service';
     PortfolioCtaBoxComponent,
     UserCreateComponent,
     UserLoginComponent,
-    UserComponent
+    UserComponent,
+    CategoryFormComponent,
+    BudgetComponent,
+    LabelFormComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,

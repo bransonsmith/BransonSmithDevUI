@@ -1,0 +1,134 @@
+.top {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 20px;
+}
+
+.mid {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.dev {
+    max-width: 220px;
+    border-radius: 10px;
+    margin: auto auto auto 0px;
+}
+
+.me {
+    max-width: 90px;
+    border-radius: 100%;
+}
+
+
+.icons {
+    width: fit-content;
+    margin: 60px auto 0px;
+    display: flex;
+    flex-direction: row;
+}
+.material-icons {
+    margin: 20px auto;
+}
+
+.about-page {
+    max-width: 94%;
+    max-width: 725px;
+    display: flex;
+    margin: auto;
+    padding-top: 0px;
+}
+.about-container {
+
+    background-color: var(--background-d);
+    padding: 10%;
+    padding-top: 40px;
+    height: fit-content;
+}
+h1 {
+    width: fit-content;
+    display: flex;
+    margin: auto auto 0px 25px;
+    font-size: 48px;
+}
+p {
+    text-align: justify;
+    letter-spacing: 1.5;
+    line-height: 25px;
+}
+.p2 {
+    margin: 0px auto auto;
+    padding: 0px 0px 0px 30px;
+}
+.material-icons {
+    margin: 0 30px;
+    font-size: 32px;
+}
+
+.hobbies {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto 0px auto;
+}
+
+.hobby {
+    height: 60px;
+    width: 60px;
+    border-radius: 100%;
+    margin: auto auto 0px auto;
+    border: solid 3px gray;
+}
+
+.cross {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    padding-left: 10px;
+}
+
+.horz {
+    background-color: var(--content-font-color);
+    position: relative;
+    left: -1px;
+    top: 7px;
+    width: 20px;
+    height: 5px;
+}
+
+.vert {
+    background-color: var(--content-font-color);
+    position: relative;
+    top: 0px;
+    left: calc(50% - 3px);
+    width: 6px;
+    height: 28px;
+}
+
+@media screen and (max-width: 665px) {
+    .mid {
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 60px;
+    }
+    .mid-left {
+        width: 100%;
+        display: flex;
+    }
+    
+    .mid-right {
+        width: 100%;
+        display: flex;
+    }
+    .dev {
+        margin: auto;
+        padding: 0px 0px 10px 0px;
+    }
+    .p2 {
+        margin: auto;
+        padding: 0px;
+    }
+}
