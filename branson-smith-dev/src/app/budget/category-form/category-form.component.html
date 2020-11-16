@@ -1,0 +1,31 @@
+
+
+<div class="loading" *ngIf="loading">
+    <div class="loading-text"></div>
+</div>
+
+<div class="card-container">
+    <div class="category-form">
+        <form [formGroup]="categoryForm" (ngSubmit)="onSubmit(categoryForm.value)" *ngIf="!loading">
+
+            <div class="form-field">
+                <input id="categoryName" type="text" formControlName="categoryName">
+                <label for="categoryName"> Category Name </label>
+            </div>
+        
+            <button class="submit-button" type="submit">Create</button>
+            
+            <div class="validation-text-container">
+                <div class="validation-text" *ngIf="validationText.length > 0">
+                    {{validationText}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card-container">
+    <div class="categories" *ngIf="categories">
+        <div *ngFor="let cat of categories">{{ cat.name }}</div>
+    </div>
+</div>

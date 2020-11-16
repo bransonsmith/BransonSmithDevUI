@@ -23,6 +23,8 @@ import { CategoryFormComponent } from './budget/category-form/category-form.comp
 import { BudgetComponent } from './budget/budget/budget.component';
 import { LabelFormComponent } from './budget/label-form/label-form.component';
 import { AboutComponent } from './about/about/about.component';
+import { PlaygroundComponent } from './playground/playground.component';
+import { BudgetMonthlyReportComponent } from './budget/budget-monthly-report/budget-monthly-report.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,8 @@ import { AboutComponent } from './about/about/about.component';
     BudgetComponent,
     LabelFormComponent,
     AboutComponent,
+    PlaygroundComponent,
+    BudgetMonthlyReportComponent,
   ],
   imports: [
     BrowserModule,

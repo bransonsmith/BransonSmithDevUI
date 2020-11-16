@@ -1,0 +1,55 @@
+
+
+<div class="loading" *ngIf="loading">
+    <div class="loading-text"></div>
+</div>
+
+<div class="card-container">
+    <div class="label-form">
+        <form [formGroup]="labelForm" (ngSubmit)="onSubmit(labelForm.value)" *ngIf="!loading">
+
+            <div class="form-field">
+                <input id="labelName" type="text" formControlName="labelName">
+                <label for="labelName"> Label Name </label>
+            </div>
+
+            <div class="form-field">
+                <input id="labelAutokeys" type="text" formControlName="labelAutokeys">
+                <label for="labelAutokeys"> Autokeys </label>
+            </div>
+
+            <div class="form-field" *ngIf="labels && categories">
+                <select id="labelCategory" formControlName="labelCategory">
+                    <option default></option>
+                    <option class="select-option" *ngFor="let category of categories">{{ category.name }}</option>
+                </select>
+                <label for="labelName"> Category </label>
+            </div>
+
+            
+
+            <button class="submit-button" type="submit">Create</button>
+            
+            <div class="validation-text-container">
+                <div class="validation-text" *ngIf="validationText.length > 0">
+                    {{validationText}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="card-container label-list">
+    <div class="labels">
+        <div class="head-text-row">
+            <div class="text-col">Name</div>
+            <div class="text-col">Category</div>
+            <div class="text-col">Autokeys</div>
+        </div>
+        <div class="text-row" *ngFor="let lab of labels">
+            <div class="text-col">{{ lab.name }}</div>
+            <div class="text-col">{{ lab.category.name }}</div>
+            <div class="text-col">{{ lab.autokeys }}</div>
+        </div>
+    </div>
+</div>

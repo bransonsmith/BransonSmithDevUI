@@ -1,0 +1,19 @@
+
+<app-budget-monthly-report
+[budgetid]="'cb217cf0-27dc-11eb-94af-21aa3b6698a9'"
+[month]="'October 2020'"
+></app-budget-monthly-report>
+
+<details class="wide-details" *ngIf="categories && labels">
+    <summary>
+        Categories
+    </summary>
+    <app-category-form [categories]="categories"></app-category-form>
+</details>
+
+<details class="wide-details" *ngIf="categories && labels">
+    <summary>
+        Labels
+    </summary>
+    <app-label-form [categories]="categories" [labels]="labels"></app-label-form>
+</details>

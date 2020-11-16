@@ -1,0 +1,11 @@
+<div class="budgeted-month" *ngIf="budgetedMonth">
+    budgetedMonth
+
+    <div class="targets">
+        <div class="target" *ngFor="let target of budgetedMonth.targetsummaries">
+            <div>{{target.category.name}}</div>
+            <div>{{target.amount}}</div>
+            <div>{{target.actualamount}}</div>
+        </div>
+    </div>
+</div>

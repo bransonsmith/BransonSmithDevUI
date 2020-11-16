@@ -1,0 +1,21 @@
+.validation-text-container {
+    height: 26px;
+    display: flex;
+}
+.validation-text {
+    color: var(--red);
+    font-size: 10px;
+    margin: 6px auto;
+}
+
+.category-form {
+    margin: auto;
+    padding-top: 20px;
+}
+
+.categories {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    padding-top: 20px;
+}
