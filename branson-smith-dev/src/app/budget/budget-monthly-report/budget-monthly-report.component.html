@@ -1,11 +1,74 @@
-<div class="budgeted-month" *ngIf="budgetedMonth">
-    budgetedMonth
+<div class="edit-form" *ngIf="isEditingTarget">
+    <app-target-edit-form
+        [targetSummary]="targetToEdit"
+        (deleteTarget)="deleteEditedTarget()"
+        (cancelEdit)="cancelEdit()">
+    </app-target-edit-form>
+</div>
 
+<div class="budgeted-month" *ngIf="budgetedMonth">
+    
+    <div class="incomes">
+        <div class="row title-row">
+            <div class="row total title">{{month}}</div>
+        </div>
+        <div class="row total">
+            <div class="name">Total</div>
+            <div class="amount total">Gross: {{dollarString(grossTotal)}}</div>
+            <div class="amount total">Net: {{dollarString(netTotal)}}</div>
+        </div>
+        <div class="target" *ngFor="let income of budgetedMonth.incomes">
+            <div class="row">
+                <div class="name">{{income.name}}</div>
+                <div class="amount">Gross: {{dollarString(income.grossamount)}}</div>
+                <div class="amount">Net: {{dollarString(income.netamount)}}</div>
+            </div>
+        </div>
+    </div>
     <div class="targets">
+        <div class="row total">
+            <div class="amount total">Category</div>
+            <div class="amount total">Budgeted</div>
+            <div class="amount total">Spent</div>
+            <div class="amount total">Remaining</div>
+        </div>
         <div class="target" *ngFor="let target of budgetedMonth.targetsummaries">
-            <div>{{target.category.name}}</div>
-            <div>{{target.amount}}</div>
-            <div>{{target.actualamount}}</div>
+            <div class="row clickable" (click)="editTarget(target)">
+                <div class="amount">{{target.category.name}}</div>
+                <div class="amount">{{dollarString(target.target.amount)}}</div>
+                <div class="amount">{{dollarString(target.actualamount)}}</div>
+                <div class="amount">{{dollarString(target.remainingamount)}}</div>
+                <div class="amount">{{pctString(target.target.amount)}}</div>
+            </div>
+        </div>
+
+        <form class="target" [formGroup]="targetForm" (ngSubmit)="onSubmit(targetForm.value)">
+            <div class="row">
+                <div class="form-field" *ngIf="categories">
+                    <select id="targetCategory" formControlName="targetCategory">
+                        <option default></option>
+                        <option class="select-option" *ngFor="let category of categories">{{ category.name }}</option>
+                    </select>
+                    <label for="targetCategory"> Category </label>
+                </div>
+                <div class="form-field">
+                    <input id="targetAmount" type="number" formControlName="targetAmount">
+                    <label for="targetAmount"> Amount </label>
+                </div>
+            
+                <button class="submit-button" type="submit"><i class="material-icons">add</i></button>
+            </div>
+        </form>
+
+        <div class="row">
+            <div class="name">Unbudgeted Money</div>
+            <div class="amount">{{dollarString(unbudgetedMoney)}}</div>
+            <div class="amount">{{pctString(unbudgetedMoney)}}</div>
+        </div>
+        <div class="row">
+            <div class="name">Unspent Money</div>
+            <div class="amount">{{dollarString(unspentMoney)}}</div>
+            <div class="amount">{{pctString(unspentMoney)}}</div>
         </div>
     </div>
 </div>

@@ -1,0 +1,29 @@
+.title {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 20px auto 10px;
+}
+
+.prompt {
+    font-size: 12px;
+    font-weight: bold;
+    margin: 16px auto 8px;
+}
+
+.title-section {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.cancel-button {
+    width: 60px;
+    height: 30px;
+    background-color: inherit;
+    color: var(--delete-color);
+    margin: 10px 10px auto auto;
+}
+.cancel-text {
+    margin: auto;
+    text-decoration: underline;
+}

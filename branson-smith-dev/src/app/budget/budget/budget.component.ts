@@ -26,4 +26,8 @@ export class BudgetComponent implements OnInit {
     this.categoryService.getCategories().subscribe(cats => this.categories = cats);
   }
 
+  getCurrentMonth() {
+    return 'February 2021';
+  }
+
 }

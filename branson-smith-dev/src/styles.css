@@ -39,6 +39,10 @@ app-root {
     --accent-color-d5: #021f17;
     --accent-color-d6: #010c09;
 
+    --delete-color: #681b22;
+    --delete-color-b: #b82935;
+    --delete-color-d: #3d1013;
+
     --contrast-color: #ca0852;
     --contrast-color-d: #a80241;
     --contrast-color-d2: #94023a;
@@ -177,6 +181,38 @@ select:hover {
     background-color: var(--accent-color);
 }
 
+.delete-button {
+    margin: 12px auto 0px;
+    background-color: var(--delete-color-d);
+    height: 38px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--delete-color-b);
+    border: 2px solid var(--delete-color);
+}
+.delete-button:hover {
+    cursor: pointer;
+    color: var(--content-font-color);
+    background-color: var(--delete-color);
+}
+
+.plain-button {
+    margin: 12px auto 0px;
+    background-color: var(--primary-color-b);
+    height: 38px;
+    width: 200px;
+    border-radius: 5px;
+    font-size: 16px;
+    color: var(--content-font-color-d);
+    border: 2px solid var(--content-font-color-d);
+}
+.plain-button:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color: var(--content-font-color);
+    border: 2px solid var(--content-font-color);
+}
 @keyframes spin {
     0% {
       transform: rotate(0deg);

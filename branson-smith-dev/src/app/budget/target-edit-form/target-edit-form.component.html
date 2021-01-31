@@ -1,0 +1,40 @@
+
+
+<div class="loading" *ngIf="loading">
+    <div class="loading-text"></div>
+</div>
+
+<div class="card-container">
+    <div class="title-section">
+        <div class="title">
+            Edit Target: {{targetSummary.category.name}}
+        </div>
+        <div class="cancel" (click)="cancelEditProcess()">
+            <button class="cancel-button">
+                <div class="cancel-text">cancel</div>
+            </button>
+        </div>
+    </div>
+    <div class="category-form">
+        <form [formGroup]="targetForm" *ngIf="!loading">
+
+            <div class="form-field">
+                <input id="targetAmount" type="number" formControlName="targetAmount" value="{{targetSummary.target.amount}}">
+                <label for="targetAmount"> Amount </label>
+            </div>
+        
+            <button class="submit-button" (click)="onSubmit()">Update</button>
+            <button class="delete-button" (click)="startDelete()" *ngIf="!areYouSure">Delete</button>
+
+            <div class="prompt" *ngIf="areYouSure">Are you sure?</div>
+            <button class="plain-button" (click)="cancelDelete()"  *ngIf="areYouSure">Cancel</button>
+            <button class="plain-button" (click)="confirmDelete()" *ngIf="areYouSure">Yes, Delete</button>
+
+            <div class="validation-text-container">
+                <div class="validation-text" *ngIf="validationText.length > 0">
+                    {{validationText}}
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

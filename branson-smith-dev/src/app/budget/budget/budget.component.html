@@ -1,8 +1,16 @@
 
-<app-budget-monthly-report
-[budgetid]="'cb217cf0-27dc-11eb-94af-21aa3b6698a9'"
-[month]="'October 2020'"
-></app-budget-monthly-report>
+
+
+<details open class="wide-details" *ngIf="categories && labels">
+    <summary>
+        Budget
+    </summary>
+    <app-budget-monthly-report
+        [budgetid]="'4b8a7cd0-601c-11eb-aa9c-83baf28d5dd7'"
+        [month]="'February 2021'"
+        
+    ></app-budget-monthly-report>
+</details>
 
 <details class="wide-details" *ngIf="categories && labels">
     <summary>

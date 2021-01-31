@@ -1,6 +1,13 @@
-summary {
-    margin: 20px 8px;
-    font-size: 20px;
+.edit-form {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: calc(48% - 100px);
+    top: calc(30% - 100px);
+}
+
+.wide-details {
+    display: flex;
 }
 
 .monthly-report {
@@ -95,4 +102,67 @@ select:hover {
     margin: auto;
     height: fit-content;
     width: fit-content;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 12px;
+}
+.incomes {
+    width: fit-content;
+    margin: 10px auto;
+    padding-bottom: 25px;
+}
+.targets {
+    padding-bottom: 25px;
+    width: fit-content;
+    margin: 10px auto;
+}
+.amount {
+    width: 125px;
+}
+.total {
+    font-weight: bold;
+    font-size: 14px;
+}
+.title-row {
+    width: 100%;
+    display: flex;
+}
+.title {
+    font-size: 20px;
+    margin: auto auto 10px auto;
+}
+
+.name {
+    width: 120px;
+}
+
+.cats {
+    width: 150px;
+}
+input {
+    width: 100px;
+}
+button {
+    width: 90px;
+    height: 32px;
+}
+.edit-button {
+    width: 28px;
+    height: 24px;
+    background-color: inherit;
+    color: var(--content-font-color);
+    border: 2px solid var(--content-font-color);
+    border-radius: 3px;
+}
+.edit-icon {
+    font-size: 16px;
+}
+.clickable:hover {
+    cursor: pointer;
+    background-color: var(--primary-color);
 }

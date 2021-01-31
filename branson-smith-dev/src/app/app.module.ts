@@ -25,6 +25,8 @@ import { LabelFormComponent } from './budget/label-form/label-form.component';
 import { AboutComponent } from './about/about/about.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { BudgetMonthlyReportComponent } from './budget/budget-monthly-report/budget-monthly-report.component';
+import { BudgetAddFormComponent } from './budget/budget-add-form/budget-add-form.component';
+import { TargetEditFormComponent } from './budget/target-edit-form/target-edit-form.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +50,8 @@ import { BudgetMonthlyReportComponent } from './budget/budget-monthly-report/bud
     AboutComponent,
     PlaygroundComponent,
     BudgetMonthlyReportComponent,
+    BudgetAddFormComponent,
+    TargetEditFormComponent,
   ],
   imports: [
     BrowserModule,

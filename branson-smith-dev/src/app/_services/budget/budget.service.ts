@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CategoryDto } from './category.service';
 import { LabelDto } from './label.service';
+import { TargetDto } from './target.service';
 
 export class BudgetDto {
   id: string;
@@ -20,13 +21,6 @@ export class IncomeDto {
   month: string;
   grossamount: number;
   netamount: number;
-}
-
-export class TargetDto {
-  id: string;
-  categoryid: string;
-  incomeid: string;
-  amount: number;
 }
 
 export class FilledOutTargetDto {
