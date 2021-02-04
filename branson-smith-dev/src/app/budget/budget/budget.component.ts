@@ -29,7 +29,7 @@ export class BudgetComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
-
+    window.scroll(0, 0);
   }
 
   attemptAuth() {
