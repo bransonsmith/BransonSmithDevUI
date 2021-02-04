@@ -58,9 +58,8 @@ export class BudgetMonthlyReportComponent implements OnInit {
       });
       this.budgetedMonth.targetsummaries.forEach(t => {
         this.unbudgetedMoney = this.unbudgetedMoney - t.target.amount;
-        this.unspentMoney = this.unspentMoney - t.actualamount;
+        this.unspentMoney = this.unspentMoney + t.actualamount;
       });
-      console.log(this.budgetedMonth);
 
       this.categoryService.getCategories().subscribe(cats => this.categories = cats.sort((a, b) => {
         if (a.name < b.name) { return -1; }

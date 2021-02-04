@@ -29,6 +29,7 @@ import { BudgetAddFormComponent } from './budget/budget-add-form/budget-add-form
 import { TargetEditFormComponent } from './budget/target-edit-form/target-edit-form.component';
 import { BudgetTransactionsReportComponent } from './budget/budget-transactions-report/budget-transactions-report.component';
 import { TransactionLiComponent } from './budget/transaction-li/transaction-li.component';
+import { LabelLiComponent } from './budget/label-li/label-li.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { TransactionLiComponent } from './budget/transaction-li/transaction-li.c
     TargetEditFormComponent,
     BudgetTransactionsReportComponent,
     TransactionLiComponent,
+    LabelLiComponent,
   ],
   imports: [
     BrowserModule,

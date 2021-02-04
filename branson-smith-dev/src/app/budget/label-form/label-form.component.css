@@ -25,10 +25,12 @@
 }
 
 .text-col {
-    width: 50%;
-    max-width: 200px;
+    width: 210px;
+    padding-left: 10px;
 }
 
 .label-list {
     width: 900px;
+    max-height: 700px;
+    overflow-y: scroll;
 }

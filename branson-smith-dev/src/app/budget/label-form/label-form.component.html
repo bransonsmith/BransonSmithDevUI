@@ -46,10 +46,12 @@
             <div class="text-col">Category</div>
             <div class="text-col">Autokeys</div>
         </div>
-        <div class="text-row" *ngFor="let lab of labels">
-            <div class="text-col">{{ lab.name }}</div>
-            <div class="text-col">{{ lab.category.name }}</div>
-            <div class="text-col">{{ lab.autokeys }}</div>
-        </div>
+        <span *ngFor="let label of labels">
+            <app-label-li
+                [label]="label"
+                [categories]="categories"
+                (labelLiDeleted)="onLabelDelete(label)"
+            ></app-label-li>
+        </span>
     </div>
 </div>

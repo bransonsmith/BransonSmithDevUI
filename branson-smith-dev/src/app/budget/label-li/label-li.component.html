@@ -1,0 +1,27 @@
+
+<div class="prompt-form" *ngIf="promptConfirmDelete">
+    <div class="prompt">Are you sure?</div>
+    <button class="plain-button" (click)="cancelDelete()" >Cancel</button>
+    <button class="plain-button" (click)="confirmDelete()">Yes, Delete</button>
+</div>
+
+<div class="text-row">
+
+    <form [formGroup]="labelForm">
+        <div class="form-field">
+            <input id="labelName" type="text" formControlName="labelName" value={{label.name}}>
+        </div>
+        <select id="labelCategory" formControlName="labelCategory">
+            <option default>{{ label.category.name }}</option>
+            <option class="select-option" *ngFor="let category of categories">{{ category.name }}</option>
+        </select>
+        <div class="form-field">
+            <input id="labelAutokeys" type="text" formControlName="labelAutokeys" class="wide" value={{label.autokeys}}>
+        </div>
+
+        <div class="buttons" *ngIf="!promptConfirmDelete">
+            <button class="in-line-button update" (click)="updateLabel()"><i class="material-icons">done</i></button>
+            <button class="in-line-button delete" (click)="startDelete()"><i class="material-icons">delete</i></button>
+        </div>
+    </form>
+</div>

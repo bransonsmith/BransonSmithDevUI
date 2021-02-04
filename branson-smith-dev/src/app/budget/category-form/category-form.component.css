@@ -11,6 +11,8 @@
 .category-form {
     margin: auto;
     padding-top: 20px;
+    max-height: 700px;
+    overflow-y: scroll;
 }
 
 .categories {

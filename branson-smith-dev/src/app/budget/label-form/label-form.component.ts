@@ -47,12 +47,18 @@ export class LabelFormComponent implements OnInit {
       }
     } else {
       const label = {
-        name: this.labelForm.value.labelName
+        name: this.labelForm.value.labelName,
+        autokeys: this.labelForm.value.labelAutokeys,
+        categoryid: this.categories.find(c => c.name === this.labelForm.value.labelCategory).id
       };
       this.loading = true;
       this.labelService.createLabel(label).subscribe(response => {
         window.location.reload();
       });
     }
+  }
+
+  onLabelDelete(label: FilledOutLabelDto) {
+    this.labels.splice(this.labels.findIndex(l => l.id === label.id), 1);
   }
 }

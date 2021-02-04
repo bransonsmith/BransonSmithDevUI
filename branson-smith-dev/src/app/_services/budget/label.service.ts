@@ -17,6 +17,12 @@ export class FilledOutLabelDto {
   category: CategoryDto;
 }
 
+export class LabelUpdateDto {
+  name: string;
+  categoryid: string;
+  autokeys: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
@@ -43,5 +49,18 @@ export class LabelService {
 
   getFilledOutLabels(): Observable<FilledOutLabelDto[]> {
     return this.http.get<FilledOutLabelDto[]>(this.url + '/budget');
+  }
+
+  updateLabel(label: LabelDto): Observable<LabelDto> {
+    const noIdField: LabelUpdateDto = {
+      name: label.name,
+      categoryid: label.categoryid,
+      autokeys: label.autokeys
+    };
+    return this.http.put<LabelDto>(this.url + '/' + label.id, noIdField, this.httpOptions);
+  }
+
+  deleteLabel(label): Observable<LabelDto> {
+    return this.http.delete<LabelDto>(this.url + '/' + label.id, this.httpOptions);
   }
 }
