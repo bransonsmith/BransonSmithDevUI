@@ -14,7 +14,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'budget', component: BudgetComponent },
   { path: 'about', component: AboutComponent },
-  { path: 'playground', component: PlaygroundComponent },
+  { path: 'misc', component: PlaygroundComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

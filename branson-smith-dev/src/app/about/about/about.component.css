@@ -23,7 +23,6 @@
     border-radius: 100%;
 }
 
-
 .icons {
     width: fit-content;
     margin: 60px auto 0px;
@@ -109,6 +108,15 @@ p {
 }
 
 @media screen and (max-width: 665px) {
+    
+    
+    .about-container {
+        padding: 0px;
+        margin: 0px;
+    }
+    .about-page {
+        max-width: 100%;
+    }
     .mid {
         display: flex;
         flex-direction: column;
@@ -127,8 +135,27 @@ p {
         margin: auto;
         padding: 0px 0px 10px 0px;
     }
+    .p1 {
+        padding-left: 14px;
+        padding-right: 14px;
+    }
     .p2 {
         margin: auto;
-        padding: 0px;
+        padding-left: 14px;
+        padding-right: 14px;
+    }
+    .icons {
+        width: fit-content;
+        max-width: 98%;
+        margin: 40px auto 0px;
+        display: flex;
+        flex-direction: row;
+    }
+    .material-icons {
+        margin: 15px;
+    }
+    .cross {
+        margin: 15px;
+        padding-left: 0px;
     }
 }

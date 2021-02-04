@@ -9,7 +9,7 @@
 .center {
     width: 100%;
     max-width: 1050px;
-    height: 100%;
+    height: fit-content;
     min-height: fit-content;
     margin: 0px auto;
     background-color: var(--background-d);
@@ -19,7 +19,7 @@
 
 .projects {
     width: calc(100% - var(--portfolio-meta-column-width));
-    height: 100%;
+    height: fit-content;
     display: flex;
     flex-direction: column;
     margin: var(--portfolio-margin) 0px 0px calc(var(--portfolio-meta-column-width) + (var(--portfolio-margin) * 2));
