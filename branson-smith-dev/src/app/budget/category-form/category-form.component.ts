@@ -32,7 +32,7 @@ export class CategoryFormComponent implements OnInit {
     this.router.navigateByUrl(target);
   }
 
-  onSubmit() {
+  onSubmit(form) {
     this.validationText = '';
     if (!this.categoryForm.valid) {
       if (this.categoryForm.value.loginUsername.length === 0 ) {

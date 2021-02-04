@@ -35,29 +35,26 @@
         <div class="target" *ngFor="let target of budgetedMonth.targetsummaries">
             <div class="row clickable" (click)="editTarget(target)">
                 <div class="amount">{{target.category.name}}</div>
-                <div class="amount">{{dollarString(target.target.amount)}}</div>
+                <div class="amount">{{dollarString(target.target.amount)}} ({{pctString(target.target.amount)}})</div>
                 <div class="amount">{{dollarString(target.actualamount)}}</div>
                 <div class="amount">{{dollarString(target.remainingamount)}}</div>
-                <div class="amount">{{pctString(target.target.amount)}}</div>
             </div>
         </div>
 
         <form class="target" [formGroup]="targetForm" (ngSubmit)="onSubmit(targetForm.value)">
-            <div class="row">
-                <div class="form-field" *ngIf="categories">
-                    <select id="targetCategory" formControlName="targetCategory">
-                        <option default></option>
-                        <option class="select-option" *ngFor="let category of categories">{{ category.name }}</option>
-                    </select>
-                    <label for="targetCategory"> Category </label>
-                </div>
-                <div class="form-field">
-                    <input id="targetAmount" type="number" formControlName="targetAmount">
-                    <label for="targetAmount"> Amount </label>
-                </div>
-            
-                <button class="submit-button" type="submit"><i class="material-icons">add</i></button>
+            <div class="form-field" *ngIf="categories">
+                <select id="targetCategory" formControlName="targetCategory">
+                    <option default></option>
+                    <option class="select-option" *ngFor="let category of categories">{{ category.name }}</option>
+                </select>
+                <label for="targetCategory"> Category </label>
             </div>
+            <div class="form-field">
+                <input id="targetAmount" type="number" formControlName="targetAmount">
+                <label for="targetAmount"> Amount </label>
+            </div>
+        
+            <button class="submit-button" type="submit"><i class="material-icons">add</i></button>
         </form>
 
         <div class="row">

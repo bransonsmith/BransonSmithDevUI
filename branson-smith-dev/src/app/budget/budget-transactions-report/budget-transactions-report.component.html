@@ -5,8 +5,7 @@
         <app-transaction-li class="transaction-li" *ngFor="let transaction of transactions"
         [transaction]="transaction"
         [categories]="categories"
-        [labels]="labels"
-        (transactionUpdate)="updateTransaction(transaction)">
+        [labels]="labels">
         </app-transaction-li>
     </ul>
 

@@ -15,7 +15,6 @@ export class TransactionLiComponent implements OnInit {
   @Input() transaction: FilledOutTransactionDto;
   @Input() categories: CategoryDto[];
   @Input() labels: LabelDto[];
-  @Output() transactionUpdate = new EventEmitter();
   selectedCategory: CategoryDto;
   selectedLabel: LabelDto;
   transactionForm;

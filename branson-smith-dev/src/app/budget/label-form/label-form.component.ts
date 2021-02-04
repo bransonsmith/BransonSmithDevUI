@@ -39,7 +39,7 @@ export class LabelFormComponent implements OnInit {
     this.router.navigateByUrl(target);
   }
 
-  onSubmit() {
+  onSubmit(form) {
     this.validationText = '';
     if (!this.labelForm.valid) {
       if (this.labelForm.value.loginUsername.length === 0 ) {

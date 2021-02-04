@@ -35,7 +35,7 @@ export class UserLoginComponent implements OnInit {
     this.router.navigateByUrl(target);
   }
 
-  onSubmit() {
+  onSubmit(form) {
     this.validationText = '';
     if (!this.loginForm.valid) {
       if (this.loginForm.value.loginUsername.length === 0 ) {

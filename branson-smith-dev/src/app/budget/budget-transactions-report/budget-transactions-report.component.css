@@ -18,3 +18,10 @@
     color: var(--content-font-color-d);
     margin: auto;
 }
+
+
+@media screen and (max-width: 400px) {
+    .transactions {
+        width: 100%;
+    }
+}

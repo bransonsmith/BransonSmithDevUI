@@ -69,7 +69,7 @@ export class BudgetMonthlyReportComponent implements OnInit {
     });
   }
 
-  onSubmit() {
+  onSubmit(form) {
     const categoryid = this.categories.find(c => c.name === this.targetForm.value.targetCategory).id;
     const target = {
       categoryid,

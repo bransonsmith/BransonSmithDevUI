@@ -90,3 +90,32 @@ i {
     margin: auto;
     text-decoration: underline;
 }
+
+@media screen and (max-width: 400px) {
+    .text-row {
+        display: flex;
+        flex-direction: column;
+        height: fit-content;
+        padding: 8px 0px;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons {
+        display: flex;
+        flex-direction: row;
+        margin: auto;
+    }
+    .in-line-button {
+        width: 40px;
+        margin: auto 6px;
+    }
+    input {
+        margin: auto;
+    }
+    select {
+        margin: auto;
+    }
+    
+}

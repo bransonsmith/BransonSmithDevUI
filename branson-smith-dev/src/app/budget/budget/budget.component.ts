@@ -17,7 +17,7 @@ export class BudgetComponent implements OnInit {
   loading = false;
   labels: FilledOutLabelDto[];
   transactions: FilledOutTransactionDto[];
-  isAuth = false;
+  isAuth = true;
   authInput = '';
   failedAuth = false;
 
@@ -30,6 +30,7 @@ export class BudgetComponent implements OnInit {
 
   ngOnInit() {
     window.scroll(0, 0);
+    this.onAuth();
   }
 
   attemptAuth() {
