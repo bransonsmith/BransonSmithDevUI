@@ -1,7 +1,6 @@
 
 
-
-<details open class="wide-details" *ngIf="categories && labels">
+<details open class="wide-details" *ngIf="transactions && categories && labels">
     <summary>
         Budget
     </summary>
@@ -12,14 +11,25 @@
     ></app-budget-monthly-report>
 </details>
 
-<details class="wide-details" *ngIf="categories && labels">
+<details open class="wide-details" *ngIf="transactions && categories && labels">
+    <summary>
+        Transactions
+    </summary>
+    <app-budget-transactions-report
+    [transactions]="transactions"
+    [categories]="categories"
+    [labels]="labels"
+    ></app-budget-transactions-report>
+</details>
+
+<details class="wide-details" *ngIf="transactions && categories && labels">
     <summary>
         Categories
     </summary>
     <app-category-form [categories]="categories"></app-category-form>
 </details>
 
-<details class="wide-details" *ngIf="categories && labels">
+<details class="wide-details" *ngIf="transactions && categories && labels">
     <summary>
         Labels
     </summary>

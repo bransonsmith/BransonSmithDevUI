@@ -1,0 +1,31 @@
+
+<li class="transaction-li">
+    <div class="content-col-wide">
+        <form [formGroup]="transactionForm">
+            <div class="labeled-select">
+                <select id="transactionLabel" formControlName="transactionLabel" (change)="updateLabel()">
+                    <option default>{{transaction.label.name}}</option>
+                    <option class="select-option" *ngFor="let label of labels"><span *ngIf="label !== transaction.label.name">{{ label.name }}</span></option>
+                </select>
+                <label for="transactionLabel"> Label </label>
+            </div>
+            <div class="labeled-select">
+                <select id="transactionCategory" formControlName="transactionCategory" (change)="updateCategory()">
+                    <option default>{{transaction.category.name}}</option>
+                    <option class="select-option" *ngFor="let category of categories"><span *ngIf="category !== transaction.category.name">{{ category.name }}</span></option>
+                </select>
+                <label for="transactionCategory"> Category </label>
+            </div>
+        </form>
+    </div>
+    <div class="content-col">
+        <div class="date"><div class="centered-text">{{transaction.date}}</div></div>
+        <div class="amount"><div class="centered-text">{{getDollarString(transaction.amount)}}</div></div>
+    </div>
+    <div class="content-col-wide">
+        <div class="details"><div class="left-aligned-text">{{ getTrimmedDetailString(transaction.details) }}</div></div>
+    </div>
+    <div class="content-row" *ngIf="invalid">
+        <div class="validation"><div class="validation-text">Invalid Category. Try Again.</div></div>
+    </div>
+</li>

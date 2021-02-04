@@ -1,0 +1,18 @@
+
+<div class="transactions">
+
+    <ul class="transaction-list" *ngIf="transactions.length > 0">
+        <app-transaction-li class="transaction-li" *ngFor="let transaction of transactions"
+        [transaction]="transaction"
+        [categories]="categories"
+        [labels]="labels"
+        (transactionUpdate)="updateTransaction(transaction)">
+        </app-transaction-li>
+    </ul>
+
+    <div class="empty" *ngIf="transactions.length === 0">
+        No Transactions Found
+    </div>
+
+</div>
+
