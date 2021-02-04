@@ -17,6 +17,9 @@ export class BudgetComponent implements OnInit {
   loading = false;
   labels: FilledOutLabelDto[];
   transactions: FilledOutTransactionDto[];
+  isAuth = false;
+  authInput = '';
+  failedAuth = false;
 
   constructor(
     private labelService: LabelService,
@@ -26,6 +29,22 @@ export class BudgetComponent implements OnInit {
     private router: Router) { }
 
   ngOnInit() {
+
+  }
+
+  attemptAuth() {
+    if (this.authInput === 'Banana5') {
+      this.onAuth();
+      this.isAuth = true;
+      this.failedAuth = false;
+    } else {
+      this.authInput = '';
+      this.failedAuth = true;
+      console.log('Failed');
+    }
+  }
+
+  onAuth() {
     this.labelService.getFilledOutLabels().subscribe(labs => {
       labs.sort((a, b) => {
         if (a.name.trim() < b.name.trim()) { return -1; }

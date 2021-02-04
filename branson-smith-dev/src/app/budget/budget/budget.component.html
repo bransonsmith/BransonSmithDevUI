@@ -1,6 +1,12 @@
 
 
-<details open class="wide-details" *ngIf="transactions && categories && labels">
+<div class="auth" *ngIf="!isAuth">
+    <input type="password" placeholder="password" [(ngModel)]="authInput">
+    <button class="plain-button" (click)="attemptAuth()">Submit</button>
+    <div class="validation" *ngIf="failedAuth">Incorrect Password</div>
+</div>
+
+<details open class="wide-details" *ngIf="isAuth && transactions && categories && labels">
     <summary>
         Budget
     </summary>
@@ -11,7 +17,7 @@
     ></app-budget-monthly-report>
 </details>
 
-<details open class="wide-details" *ngIf="transactions && categories && labels">
+<details open class="wide-details" *ngIf="isAuth && transactions && categories && labels">
     <summary>
         Transactions
     </summary>
@@ -22,14 +28,14 @@
     ></app-budget-transactions-report>
 </details>
 
-<details class="wide-details" *ngIf="transactions && categories && labels">
+<details class="wide-details" *ngIf="isAuth && transactions && categories && labels">
     <summary>
         Categories
     </summary>
     <app-category-form [categories]="categories"></app-category-form>
 </details>
 
-<details class="wide-details" *ngIf="transactions && categories && labels">
+<details class="wide-details" *ngIf="isAuth && transactions && categories && labels">
     <summary>
         Labels
     </summary>

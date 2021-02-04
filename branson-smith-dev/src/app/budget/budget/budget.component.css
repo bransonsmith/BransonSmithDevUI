@@ -1,3 +1,23 @@
 details {
     padding-bottom: 20px;
 }
+
+input {
+    margin: auto;
+}
+button {
+    margin: auto;
+}
+
+.auth {
+    width: 280px;
+    margin: auto;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.validation {
+    margin: auto;
+    color: var(--red);
+}
