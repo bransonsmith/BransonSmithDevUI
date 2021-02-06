@@ -1,0 +1,26 @@
+.dashboard {
+    width: 100%;
+    height: fit-content;
+    min-height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+button {
+    margin: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.plus {
+    font-size: 30px;
+    font-weight: bold;
+    margin: auto 0px auto 1%;
+    border: 2px solid var(--accent-color-b) 25%;
+}
+
+.button-text {
+    margin: auto;
+    padding-top: 3px;
+    font-size: 18px;
+}

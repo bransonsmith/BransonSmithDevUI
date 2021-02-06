@@ -21,7 +21,7 @@ export class HeaderComponent implements OnInit {
     { text: 'My Work', target: 'portfolio' },
     { text: 'About Me', target: 'about' },
     { text: 'Contact', target: 'contact', accented: true },
-    { text: 'Misc Projects', target: 'misc' },
+    { text: 'Misc Projects', target: 'misc' }
   ];
 
   constructor(

@@ -1,0 +1,81 @@
+
+.hole {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    border-bottom: 2px solid var(--background-b);
+}
+
+.hole-form {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+}
+
+.course-name {
+    margin: auto auto auto 0px;
+}
+
+.add-new-course {
+    padding-top: 10px;
+    border-top: solid 2px var(--primary-color-d);
+}
+
+.new-course-form {
+    margin: auto auto auto auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 0px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.number-input {
+    width: 50px;
+    margin: auto;
+}
+
+.new-course-button {
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+    margin: 15px auto;
+}
+
+.add-text {
+    margin: auto;
+}
+
+.labeled-field {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 2px auto;
+}
+.save-hole {
+    width: 32px;
+    height: 32px;
+    padding: 1px;
+    display: flex;
+    margin: auto;
+}
+.save {
+    padding: 0px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+    font-size: 16px;
+}
+
+.form-label {
+    margin-left: 5%;
+}

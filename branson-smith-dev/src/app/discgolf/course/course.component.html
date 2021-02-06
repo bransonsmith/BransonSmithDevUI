@@ -1,0 +1,56 @@
+<div class="course" *ngIf="course">
+
+    <form class="new-course-form" [formGroup]="courseForm">
+                
+        <div class="labeled-field">
+            <input id="courseName" type="text" formControlName="courseName" value="{{course.name}}">
+            <label for="courseName"> name </label>
+        </div>
+        
+        <div class="row">
+            <div class="labeled-field">
+                <input class="number-input" id="coursePar" type="number" formControlName="coursePar" value="{{course.par}}">
+                <label for="coursePar"> par </label>
+            </div>
+
+            <div class="labeled-field">
+                <input class="number-input" id="courseDistance" type="number" formControlName="courseDistance" value="{{course.distance}}">
+                <label for="courseDistance"> distance </label>
+            </div>
+
+        </div>
+
+        <button class="submit-button new-course-button" (click)="addCourse()">
+            <div class="add-text">Save</div>
+        </button>
+    </form>
+
+    <div class="holes">
+        <div class="hole-headers">
+            <div class="hole-header">number</div>
+            <div class="hole-header">par</div>
+            <div class="hole-header">distance</div>
+            <div class="hole-header"></div>
+        </div>
+        <app-hole *ngFor="let hole of holes"
+        [hole]="hole">
+        </app-hole>
+
+        <label class="form-label" for="holeForm"> Add Hole </label>
+        <form class="add-hole-form" [formGroup]="holeForm">
+            <div class="labeled-field">
+                <input class="number-input" id="holeNumber" type="number" formControlName="holeNumber" value="{{holeForm.value.holeNumber}}">
+                <label for="holeNumber"> number </label>
+            </div>
+            <div class="labeled-field">
+                <input class="number-input" id="holePar" type="number" formControlName="holePar" value="{{holeForm.value.holePar}}">
+                <label for="holePar"> par </label>
+            </div>
+            <div class="labeled-field">
+                <input class="number-input" id="holeDistance" type="number" formControlName="holeDistance" value="{{holeForm.value.holeDistance}}">
+                <label for="holeDistance"> distance </label>
+            </div>
+            <button class="submit-button add-hole" (click)="addHole()"><i class="material-icons add">add</i></button>
+        </form>
+    </div>
+</div>

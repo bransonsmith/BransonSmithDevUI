@@ -1,0 +1,28 @@
+
+<div class="discgolf-round">
+
+    <div class="title-section">
+        <div class="title">{{round.course.name}}</div>
+        <div class="subtitle">{{getDateString(round.date)}}</div>
+        <div class="course-summary">
+            <div class="par">{{course.par}}</div>
+            <div class="dist">{{course.distance}}</div>
+        </div>
+    </div>
+
+    <div class="holes-section">
+        <div class="holes-header">
+            <div class="player-row">
+                <app-discgolf-player-summary *ngFor="let player of roundPlayers"
+                [player]="player">
+                </app-discgolf-player-summary>
+            </div>
+        </div>
+
+        <div class="hole-row" *ngFor="let hole of holes">
+
+        </div>
+
+    </div>
+</div>
+

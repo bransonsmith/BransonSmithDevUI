@@ -2,6 +2,10 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about/about.component';
 import { BudgetComponent } from './budget/budget/budget.component';
+import { CourseEditorComponent } from './discgolf/course-editor/course-editor.component';
+import { CourseComponent } from './discgolf/course/course.component';
+import { DiscgolfHomeComponent } from './discgolf/discgolf-home/discgolf-home.component';
+import { DiscgolfRoundAddComponent } from './discgolf/discgolf-round-add/discgolf-round-add.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PlaygroundComponent } from './playground/playground.component';
@@ -15,6 +19,10 @@ const routes: Routes = [
   { path: 'budget', component: BudgetComponent },
   { path: 'about', component: AboutComponent },
   { path: 'misc', component: PlaygroundComponent },
+  { path: 'discgolf', component: DiscgolfHomeComponent },
+  { path: 'discgolf/new-round', component: DiscgolfRoundAddComponent },
+  { path: 'discgolf/courses', component: CourseEditorComponent },
+  { path: 'discgolf/courses/:id', component: CourseComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

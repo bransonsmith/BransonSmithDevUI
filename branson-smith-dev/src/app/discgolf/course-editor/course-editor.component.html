@@ -1,0 +1,44 @@
+
+<div class="course-editor">
+
+    <div class="card-container courses">
+        <div class="course-row" *ngFor="let course of courses" (click)="selectCourse(course)">
+            <div class="course-name">{{ course.name }}</div>
+            <div class="course-name">{{ course.par }}</div>
+            <div class="course-name">{{ course.distance }}</div>
+        </div>
+    </div>
+
+    <details class="wide-details" *ngIf="courses">
+        <summary>
+            Add New Course
+        </summary>
+        <div class="add-new-course">
+            <form class="new-course-form" [formGroup]="newCourseForm">
+                
+                <div class="labeled-field">
+                    <input id="newCourseName" type="text" formControlName="newCourseName">
+                    <label for="newCoursePar"> name </label>
+                </div>
+                
+                <div class="row">
+                    <div class="labeled-field">
+                        <input class="number-input" id="newCoursePar" type="number" formControlName="newCoursePar">
+                        <label for="newCoursePar"> par </label>
+                    </div>
+        
+                    <div class="labeled-field">
+                        <input class="number-input" id="newCourseDistance" type="number" formControlName="newCourseDistance">
+                        <label for="newCourseDistance"> distance </label>
+                    </div>
+
+                </div>
+    
+                <button class="submit-button new-course-button" (click)="addCourse()">
+                    <div class="add-text">Add Course</div>
+                </button>
+            </form>
+        </div>
+    </details>
+
+</div>

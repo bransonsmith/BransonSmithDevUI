@@ -1,0 +1,39 @@
+<form class="round-add" [formGroup]="roundForm">
+
+    <div class="form-field">
+        <label for="roundCourse"> Course </label>
+        <select id="roundCourse" formControlName="roundCourse">
+            <option default>Custom/New</option>
+            <option class="select-option" *ngFor="let course of courses">{{ course.name }}</option>
+        </select>
+    </div>
+
+    <label for="roundPlayers" class="players-label"> Players </label>
+
+    <div class="card-container players">
+
+        <div class="player-row" *ngFor="let player of players" (click)="selectPlayer(player)">
+            <div class="player-name">{{ player.name }}</div>
+            <div class="player-select">
+                <i class="material-icons check" *ngIf="player.selected">check_box</i>
+                <i class="material-icons check-empty" *ngIf="!player.selected">check_box_outline_blank</i>
+            </div>
+        </div>
+
+        <div class="add-new-player">
+            <label for="newPlayerName"> Add New Player </label>
+            <form class="new-player-form" [formGroup]="newPlayerForm">
+                <input id="newPlayerName" type="text" formControlName="newPlayerName" placeholder="New Player's Name">
+                <button class="submit-button new-player-button" (click)="addPlayer()">
+                    <i class="material-icons add">add</i>
+                </button>
+            </form>
+        </div>
+    </div>
+    
+
+    <button class="submit-button create-round-button" (click)="submitForm()">
+        Create Round
+    </button>
+
+</form>

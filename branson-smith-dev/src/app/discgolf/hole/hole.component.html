@@ -1,0 +1,14 @@
+<div class="hole">
+    <form class="hole-form" [formGroup]="holeForm">
+        <div class="labeled-field">
+            <input class="number-input" id="holeNumber" type="number" formControlName="holeNumber" value="{{hole.number}}">
+        </div>
+        <div class="labeled-field">
+            <input class="number-input" id="holePar" type="number" formControlName="holePar" value="{{hole.par}}">
+        </div>
+        <div class="labeled-field">
+            <input class="number-input" id="holeDistance" type="number" formControlName="holeDistance" value="{{hole.distance}}">
+        </div>
+        <button class="submit-button save-hole" (click)="saveHole()"><i class="material-icons save">save</i></button>
+    </form>
+</div>

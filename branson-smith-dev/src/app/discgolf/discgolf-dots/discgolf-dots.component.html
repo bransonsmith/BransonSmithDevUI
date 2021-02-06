@@ -1,0 +1,20 @@
+
+<div class="one" *ngIf="count === 1">
+    <div class="dot"></div>
+</div>
+
+<div class="two" *ngIf="count === 2">
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+
+<div class="three" *ngIf="count === 3">
+    <div class="dot"></div>
+    <div class="dot"></div>
+    <div class="dot"></div>
+</div>
+
+<div class="four-or-more" *ngIf="count >= 4">
+    <div class="dot"></div>
+    <div class="num">x{{count}}</div>
+</div>

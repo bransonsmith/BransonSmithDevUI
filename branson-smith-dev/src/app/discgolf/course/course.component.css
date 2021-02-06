@@ -1,0 +1,134 @@
+
+.course-editor {
+    width: 100%;
+    padding: 0px;
+    padding-top: 25px;
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    color: var(--content-font-color);
+}
+
+.courses-label {
+    margin-left: 6%;
+    margin-bottom: 2px;
+}
+.courses {
+    padding: 6px;
+    border: 2px solid var(--background-b);
+    width: 85%;
+    margin: auto;
+}
+
+.course-row {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    border: 1px solid var(--background);
+    border-radius: 4px;
+    padding-bottom: 2px;
+    margin: auto;
+}
+
+.wide-details {
+    width: 90%;
+    padding-bottom: 20px;
+}
+
+.course-select {
+    margin: auto 0px 0px auto;
+    height: 24px;
+}
+.check {
+    color: var(--accent-color);
+}
+.check-empty {
+    color: var(--content-font-color);
+}
+
+.course-name {
+    margin: auto auto auto 0px;
+}
+
+.add-new-course {
+    padding-top: 10px;
+    border-top: solid 2px var(--primary-color-d);
+}
+
+.new-course-form {
+    margin: auto auto auto auto;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-top: 20px;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.number-input {
+    width: 50px;
+    margin: 0px auto;
+}
+
+.new-course-button {
+    display: flex;
+    flex-direction: row;
+    padding: 1px;
+    margin: 15px auto;
+}
+
+.add-text {
+    margin: auto;
+}
+
+.labeled-field {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: 2px auto;
+}
+
+.add-hole-form {
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    flex-direction: row;
+    padding: 0px;
+    margin: 0px;
+}
+.add-hole {
+    width: 32px;
+    height: 32px;
+    padding: 1px;
+    display: flex;
+    margin: auto;
+}
+.add {
+    padding: 0px;
+    width: fit-content;
+    height: fit-content;
+    margin: auto;
+}
+
+.form-label {
+    margin-left: 5%;
+}
+
+.hole-headers {
+    display: flex;
+    flex-direction: row;
+    font-size: 12px;
+    width: 100%;
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: solid 2px var(--primary-color-d);
+    border-bottom: 2px solid var(--background-b);
+}
+.hole-header {
+    margin: auto;
+}
