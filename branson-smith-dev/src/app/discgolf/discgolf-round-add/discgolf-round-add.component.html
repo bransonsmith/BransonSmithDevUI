@@ -3,7 +3,6 @@
     <div class="form-field">
         <label for="roundCourse"> Course </label>
         <select id="roundCourse" formControlName="roundCourse">
-            <option default>Custom/New</option>
             <option class="select-option" *ngFor="let course of courses">{{ course.name }}</option>
         </select>
     </div>
@@ -37,3 +36,11 @@
     </button>
 
 </form>
+
+<div class="card-container rounds">
+    <div class="round-row" *ngFor="let round of rounds; let i = index" (click)="goToRound(round)">
+        <div class="num">{{i + 1}}.</div>
+        <div class="course">{{round.course.name}}</div>
+        <div class="date">{{getDateStr(round.date)}}</div>
+    </div>
+</div>

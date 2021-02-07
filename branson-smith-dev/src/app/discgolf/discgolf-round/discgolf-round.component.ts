@@ -1,5 +1,8 @@
+import { ThrowStmt } from '@angular/compiler';
 import { Component, Input, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { HoleDto } from 'src/app/_services/discgolf/hole.service';
+import { FilledOutRoundDto, RoundDto, RoundService } from 'src/app/_services/discgolf/round.service';
 
 export class DiscGolfPlayerHole {
   id: string;
@@ -20,12 +23,9 @@ export class FilledOutGolfPlayerHole {
   shots: string;
 }
 
-
 export class DiscGolfRoundPlayer {
   id: string;
   name: string;
-  score: number;
-  dots: number;
   playerHoles: DiscGolfPlayerHole[];
 }
 
@@ -36,26 +36,29 @@ export class DiscGolfRoundPlayer {
 })
 export class DiscgolfRoundComponent implements OnInit {
 
-  players = [
-    { name: 'Branson', id: '1' },
-    { name: 'AJ',      id: '2' },
-    { name: 'Alex',    id: '3' },
-    { name: 'Nick',    id: '4' },
-  ];
-  holes = [
-    { number: 1, par: 3, distance: 250, id: '1', courseId: '1' },
-    { number: 2, par: 3, distance: 250, id: '2', courseId: '1' },
-    { number: 3, par: 3, distance: 250, id: '3', courseId: '1' },
-    { number: 4, par: 3, distance: 250, id: '4', courseId: '1' },
-    { number: 5, par: 3, distance: 250, id: '5', courseId: '1' },
-    { number: 6, par: 3, distance: 250, id: '6', courseId: '1' },
-    { number: 7, par: 3, distance: 250, id: '7', courseId: '1' },
-  ];
-  roundPlayers: DiscGolfRoundPlayer[];
+  round: FilledOutRoundDto;
 
-  constructor() { }
+  constructor(
+    private roundService: RoundService,
+    private route: ActivatedRoute
+  ) { }
 
   ngOnInit() {
+    this.route.paramMap.subscribe(p =>
+      this.roundService.getFilledOutRound(p.get('id')).subscribe(r => {
+        r.holes.sort( (a, b) => a.number - b.number );
+        this.round = r;
+    }));
+  }
+
+  getDateStr(date) {
+    const year = date.split('-')[0];
+    const month = date.split('-')[1];
+    const day = date.split('-')[2].split('T')[0];
+    const hour = (parseInt(date.split('-')[2].split('T')[1].split(':')[0], 10) + 6).toString().padStart(2, '0');
+    const minute = date.split('-')[2].split('T')[1].split(':')[1].split('.')[0];
+
+    return `${month}/${day}/${year} ${hour}:${minute}`;
   }
 
 }

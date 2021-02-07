@@ -16,7 +16,7 @@ export class DiscgolfHomeComponent implements OnInit {
   }
 
   createNewRound() {
-    this.route.navigateByUrl('discgolf/new-round');
+    this.route.navigateByUrl('discgolf/rounds');
   }
 
 }

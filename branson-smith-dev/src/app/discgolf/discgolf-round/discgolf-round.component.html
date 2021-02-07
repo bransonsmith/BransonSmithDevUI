@@ -1,26 +1,26 @@
 
-<div class="discgolf-round">
+<div class="discgolf-round" *ngIf="round">
 
     <div class="title-section">
         <div class="title">{{round.course.name}}</div>
-        <div class="subtitle">{{getDateString(round.date)}}</div>
+        <div class="subtitle">{{getDateStr(round.date)}}</div>
         <div class="course-summary">
-            <div class="par">{{course.par}}</div>
-            <div class="dist">{{course.distance}}</div>
+            <div class="par">{{round.course.par}}</div>
+            <div class="dist">{{round.course.distance}}</div>
         </div>
     </div>
 
     <div class="holes-section">
         <div class="holes-header">
             <div class="player-row">
-                <app-discgolf-player-summary *ngFor="let player of roundPlayers"
+                <app-discgolf-player-summary *ngFor="let player of round.playerInfo"
                 [player]="player">
                 </app-discgolf-player-summary>
             </div>
         </div>
 
-        <div class="hole-row" *ngFor="let hole of holes">
-
+        <div class="hole-row" *ngFor="let hole of round.holes">
+            <div class="number">{{hole.number}}</div>
         </div>
 
     </div>

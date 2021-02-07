@@ -15,4 +15,17 @@ export class DiscgolfPlayerSummaryComponent implements OnInit {
   ngOnInit() {
   }
 
+  getScoreString() {
+    let score = 0;
+    // tslint:disable-next-line:prefer-for-of
+    for (let i = 0; i < this.player.playerHoles.length; i++) {
+      const ph = this.player.playerHoles[i];
+      score += ph.score;
+    }
+    if (score < 0) {
+      return '-' + score.toString();
+    }
+    return '+' + score.toString();
+  }
+
 }
