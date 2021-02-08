@@ -179,6 +179,10 @@ form {
     flex-direction: row;
 }
 
+.boxed {
+    border: 1px solid var(--content-font-color);
+}
+
 @media screen and (max-width: 400px) {
 
 
@@ -221,4 +225,9 @@ form {
     .total {
         margin-bottom: 6px;
     }
+}
+
+.pad {
+    height: 20px;
+    padding: 10px;
 }

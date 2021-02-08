@@ -37,6 +37,9 @@ import { DiscgolfDotsComponent } from './discgolf/discgolf-dots/discgolf-dots.co
 import { CourseEditorComponent } from './discgolf/course-editor/course-editor.component';
 import { CourseComponent } from './discgolf/course/course.component';
 import { HoleComponent } from './discgolf/hole/hole.component';
+import { ScorecardCourseColComponent } from './discgolf/scorecard-course-col/scorecard-course-col.component';
+import { ScorecardPlayerColComponent } from './discgolf/scorecard-player-col/scorecard-player-col.component';
+import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.component';
 
 @NgModule({
   declarations: [
@@ -72,6 +75,9 @@ import { HoleComponent } from './discgolf/hole/hole.component';
     CourseEditorComponent,
     CourseComponent,
     HoleComponent,
+    ScorecardCourseColComponent,
+    ScorecardPlayerColComponent,
+    PlayerHoleComponent,
   ],
   imports: [
     BrowserModule,

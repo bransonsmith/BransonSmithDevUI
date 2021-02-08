@@ -1,0 +1,16 @@
+<div class="course-col">
+
+    <div class="col-head"></div>
+
+    <div class="holes">
+        <div class="hole" *ngFor="let hole of holes">
+            <div class="hole-label">
+                <div class="num">{{ hole.number }}</div>
+            </div>
+            <div class="info">
+                <div class="par">par {{ hole.par }}</div>
+                <div class="par">{{ hole.distance }}`</div>
+            </div>
+        </div>
+    </div>
+</div>

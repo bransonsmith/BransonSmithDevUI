@@ -62,6 +62,10 @@ app-root {
     --portfolio-border-radius: 5px;
 
     --header-height: 50px;
+
+    --discgolf-birdie: #41ffbd;
+    --discgolf-eagle: #41ccff;
+    --discgolf-bogey: #aa3e3e;
 }
 
 ol, ul, li {

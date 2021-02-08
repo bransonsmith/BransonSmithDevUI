@@ -15,7 +15,7 @@
         <div class="row total">
             <div class="name">Total</div>
             <div class="amount total">Gross: {{dollarString(grossTotal)}}</div>
-            <div class="amount total">Net: {{dollarString(netTotal)}}</div>
+            <div class="amount total boxed">Net: {{dollarString(netTotal)}}</div>
         </div>
         <div class="target" *ngFor="let income of budgetedMonth.incomes">
             <div class="row">
@@ -41,7 +41,7 @@
             </div>
         </div>
 
-        <form class="target" [formGroup]="targetForm" (ngSubmit)="onSubmit(targetForm.value)">
+        <form class="target" [formGroup]="targetForm" (ngSubmit)="onSubmit(targetForm.value)" *ngIf="budgetid !== 'demo'">
             <div class="form-field" *ngIf="categories">
                 <select id="targetCategory" formControlName="targetCategory">
                     <option default></option>
@@ -56,7 +56,7 @@
         
             <button class="submit-button" type="submit"><i class="material-icons">add</i></button>
         </form>
-
+        <div class="pad" *ngIf="budgetid === 'demo'"></div>
         <div class="row">
             <div class="name">Unbudgeted Money</div>
             <div class="amount">{{dollarString(unbudgetedMoney)}}</div>

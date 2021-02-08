@@ -1,0 +1,45 @@
+.hole {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.score {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: row;
+    font-size: 13px;
+}
+
+.score-text {
+    width: fit-content;
+    margin: auto;
+}
+
+.dots {
+    width: fit-content;
+    margin: auto;
+}
+
+.birdie {
+    background-color: var(--discgolf-birdie);
+    color: black;
+}
+.bogey {
+    background-color: var(--discgolf-bogey);
+}
+.par {
+    background-color: var(--background);
+}
+.eagle {
+    background-color: var(--discgolf-eagle);
+}
+.ace {
+    color: black;
+    font-weight: bold;
+    background: linear-gradient(25deg, var(--discgolf-eagle), var(--discgolf-birdie), var(--accent-color));
+    border: 2px solid var(--discgolf-birdie);
+    box-shadow: 0px 0px 20px var(--discgolf-birdie);
+}

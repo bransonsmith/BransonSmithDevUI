@@ -13,7 +13,7 @@
     flex-direction: row;
     overflow-y: visible;
     color: var(--header-font-color);
-    z-index: 20;
+    z-index: 9999;
 }
 
 .home-mobile {

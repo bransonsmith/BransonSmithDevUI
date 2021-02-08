@@ -3,4 +3,11 @@
     height: 6px;
     width: 6px;
     border-radius: 100%;
+    margin: 2px;
+    color: inherit;
+}
+.dots {
+    display: flex;
+    flex-direction: row;
+    color: inherit;
 }

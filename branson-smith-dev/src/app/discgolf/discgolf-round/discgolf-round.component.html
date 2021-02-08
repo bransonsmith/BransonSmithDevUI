@@ -1,28 +1,33 @@
 
-<div class="discgolf-round" *ngIf="round">
-
-    <div class="title-section">
+<div class="title-section" *ngIf="round">
+    <div class="course-summary">
         <div class="title">{{round.course.name}}</div>
-        <div class="subtitle">{{getDateStr(round.date)}}</div>
-        <div class="course-summary">
-            <div class="par">{{round.course.par}}</div>
-            <div class="dist">{{round.course.distance}}</div>
-        </div>
+        <div class="detail">Par {{round.course.par}}</div>
     </div>
+    <div class="course-summary">
+        <div class="subtitle">{{getDateStr(round.date)}}</div>
+        <div class="detail">Dist {{round.course.distance}}</div>
+    </div>
+</div>
 
+<button class="delete-button" (click)="startDelete()">
+    <i class="material-icons">delete</i>
+</button>
+
+<div class="delete-form" *ngIf="promptDelete">
+    <div class="delete-text">Are you sure you want to delete this round?</div>
+    <button class="plain-button delete-color" (click)="confirmDelete()">Yes, Delete!</button>
+    <button class="plain-button" (click)="cancelDelete()">Cancel</button>
+</div>
+
+<div class="card-container discgolf-round" *ngIf="round">
     <div class="holes-section">
-        <div class="holes-header">
-            <div class="player-row">
-                <app-discgolf-player-summary *ngFor="let player of round.playerInfo"
-                [player]="player">
-                </app-discgolf-player-summary>
-            </div>
-        </div>
-
-        <div class="hole-row" *ngFor="let hole of round.holes">
-            <div class="number">{{hole.number}}</div>
-        </div>
-
+        <app-scorecard-course-col
+        [holes]="round.holes">
+        </app-scorecard-course-col>
+        <app-scorecard-player-col *ngFor="let player of round.playerInfo"
+        [playerInfo]="player">
+        </app-scorecard-player-col>
     </div>
 </div>
 

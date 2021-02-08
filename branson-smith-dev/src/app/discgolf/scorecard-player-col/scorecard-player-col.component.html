@@ -1,0 +1,56 @@
+<div class="card-container edit-hole-form" *ngIf="editingHole">
+    <div class="title-row">
+        <div class="edit-title">
+            Hole {{holeBeingEdited.hole.number}}
+        </div>
+        <div class="close-button" (click)="stopEditing()">
+            <i class="material-icons">close</i>
+        </div>
+    </div>
+
+    <form [formGroup]="editHoleForm">
+        <div class="form-field">
+            <div class="num-input-line">
+                <input id="holeScore" class="num-input" type="number" formControlName="holeScore" value="{{holeBeingEdited.score}}">
+                <button class="plain-button inc-button" (click)="dec('score')"><i class="material-icons">remove</i></button>
+                <button class="plain-button inc-button" (click)="inc('score')"><i class="material-icons">add</i></button>
+            </div>
+            <label for="holeScore"> score </label>
+        </div>
+
+        <div class="form-field">
+            <div class="num-input-line">
+                <input id="holeDots" class="num-input" type="number" formControlName="holeDots" value="{{holeBeingEdited.dots}}">
+                <button class="plain-button inc-button" (click)="dec('dots')"><i class="material-icons">remove</i></button>
+                <button class="plain-button inc-button" (click)="inc('dots')"><i class="material-icons">add</i></button>
+            </div>
+            <label for="holeDots"> dots </label>
+        </div>
+
+        <div class="form-field">
+            <input id="holeShots" type="text" formControlName="holeShots" value="{{holeBeingEdited.shots}}">
+            <label for="holeShots"> Shots </label>
+        </div>
+    
+        <button class="submit-button" (click)="saveEditForm()">Save</button>
+    </form>
+</div>
+
+<div class="course-col">
+
+    <div class="col-head">
+        <div class="name">{{playerInfo.name}}</div>
+        <div class="summary">
+            <div class="total-score">{{getScoreString()}}</div>
+            <app-discgolf-dots class="total-dots"
+                [count]="getDotTotal()">
+            </app-discgolf-dots>
+        </div>
+    </div>
+
+    <div class="holes">
+        <app-player-hole class="hole" *ngFor="let hole of playerInfo.playerHoles" (click)="editHole(hole)"
+        [hole]="hole">
+        </app-player-hole>
+    </div>
+</div>

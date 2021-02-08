@@ -3,8 +3,8 @@ import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { CourseDto } from './course.service';
 import { HoleDto } from './hole.service';
-import { PlayerHoleDto } from './player-hole.service';
-import { PlayerRoundDto } from './player-round.service';
+import { FilledOutPlayerHoleDto, PlayerHoleService } from './player-hole.service';
+import { PlayerRoundDto, PlayerRoundService } from './player-round.service';
 
 
 export class RoundDto {
@@ -31,7 +31,7 @@ export class FilledOutRoundPlayerDto {
   id: string;
   name: string;
   playerRound: PlayerRoundDto;
-  playerHoles: PlayerHoleDto[];
+  playerHoles: FilledOutPlayerHoleDto[];
 }
 
 @Injectable({
@@ -48,7 +48,9 @@ export class RoundService {
   };
 
   constructor(
-    private http: HttpClient
+    private http: HttpClient,
+    private playerHoleService: PlayerHoleService,
+    private playerRoundService: PlayerRoundService
   ) { }
 
   createRound(newRound): Observable<RoundDto> {
@@ -86,6 +88,16 @@ export class RoundService {
 
   deleteRound(round): Observable<RoundDto> {
     return this.http.delete<RoundDto>(this.url + '/' + round.id, this.httpOptions);
+  }
+
+  deleteRoundData(round: FilledOutRoundDto) {
+    round.playerInfo.forEach(info => {
+      info.playerHoles.forEach(ph => {
+        this.playerHoleService.deletePlayerHole(ph).subscribe();
+      });
+      this.playerRoundService.deletePlayerRound(info).subscribe();
+    });
+    this.deleteRound(round).subscribe();
   }
 }
 

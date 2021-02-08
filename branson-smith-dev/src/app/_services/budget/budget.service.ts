@@ -21,6 +21,7 @@ export class IncomeDto {
   month: string;
   grossamount: number;
   netamount: number;
+  name: string;
 }
 
 export class FilledOutTargetDto {
