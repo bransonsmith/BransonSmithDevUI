@@ -1,0 +1,8 @@
+button {
+    margin: 40px auto 0px;
+}
+.playground {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}

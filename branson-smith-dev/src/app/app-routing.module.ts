@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { AboutComponent } from './about/about/about.component';
 import { BudgetComponent } from './budget/budget/budget.component';
+import { ContactComponent } from './contact/contact.component';
 import { CourseEditorComponent } from './discgolf/course-editor/course-editor.component';
 import { CourseComponent } from './discgolf/course/course.component';
 import { DiscgolfHomeComponent } from './discgolf/discgolf-home/discgolf-home.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'user', component: UserComponent },
   { path: 'budget', component: BudgetComponent },
   { path: 'about', component: AboutComponent },
+  { path: 'contact', component: ContactComponent },
   { path: 'misc', component: PlaygroundComponent },
   { path: 'discgolf', component: DiscgolfHomeComponent },
   { path: 'discgolf/rounds', component: DiscgolfRoundAddComponent },

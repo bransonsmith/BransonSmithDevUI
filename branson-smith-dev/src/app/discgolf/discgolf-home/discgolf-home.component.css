@@ -4,10 +4,11 @@
     min-height: 100%;
     display: flex;
     flex-direction: column;
+    padding-top: 20px;
 }
 
 button {
-    margin: auto;
+    margin: 20px auto;
     display: flex;
     flex-direction: row;
 }
@@ -23,4 +24,10 @@ button {
     margin: auto;
     padding-top: 3px;
     font-size: 18px;
+}
+
+.explain {
+    text-align: center;
+    width: fit-content;
+    margin: 20px auto;
 }

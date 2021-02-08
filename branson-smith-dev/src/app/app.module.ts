@@ -32,7 +32,6 @@ import { LabelLiComponent } from './budget/label-li/label-li.component';
 import { DiscgolfHomeComponent } from './discgolf/discgolf-home/discgolf-home.component';
 import { DiscgolfRoundAddComponent } from './discgolf/discgolf-round-add/discgolf-round-add.component';
 import { DiscgolfRoundComponent } from './discgolf/discgolf-round/discgolf-round.component';
-import { DiscgolfPlayerSummaryComponent } from './discgolf/discgolf-player-summary/discgolf-player-summary.component';
 import { DiscgolfDotsComponent } from './discgolf/discgolf-dots/discgolf-dots.component';
 import { CourseEditorComponent } from './discgolf/course-editor/course-editor.component';
 import { CourseComponent } from './discgolf/course/course.component';
@@ -40,6 +39,7 @@ import { HoleComponent } from './discgolf/hole/hole.component';
 import { ScorecardCourseColComponent } from './discgolf/scorecard-course-col/scorecard-course-col.component';
 import { ScorecardPlayerColComponent } from './discgolf/scorecard-player-col/scorecard-player-col.component';
 import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.component';
+import { ContactComponent } from './contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -70,7 +70,6 @@ import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.componen
     DiscgolfHomeComponent,
     DiscgolfRoundAddComponent,
     DiscgolfRoundComponent,
-    DiscgolfPlayerSummaryComponent,
     DiscgolfDotsComponent,
     CourseEditorComponent,
     CourseComponent,
@@ -78,6 +77,7 @@ import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.componen
     ScorecardCourseColComponent,
     ScorecardPlayerColComponent,
     PlayerHoleComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,

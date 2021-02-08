@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { FormBuilder } from '@angular/forms';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { CourseDto, CourseService } from 'src/app/_services/discgolf/course.service';
 import { HoleDto, HoleService } from 'src/app/_services/discgolf/hole.service';
 
@@ -20,7 +20,8 @@ export class CourseComponent implements OnInit {
     private courseService: CourseService,
     private route: ActivatedRoute,
     private formBuilder: FormBuilder,
-    private holeService: HoleService
+    private holeService: HoleService,
+    private router: Router
   ) {
     this.courseForm = this.formBuilder.group({
       courseName: [''],
@@ -69,5 +70,18 @@ export class CourseComponent implements OnInit {
       this.holeForm.value.holePar = 3;
       this.holeForm.value.holeDistance = 0;
     });
+  }
+
+  addCourse() {
+    const name = this.courseForm.value.courseName;
+    const par = this.courseForm.value.coursePar;
+    const distance = this.courseForm.value.courseDistance;
+    this.courseService.createCourse({
+      name,
+      par,
+      distance
+    }).subscribe( c =>
+      this.router.navigateByUrl('/discgolf/courses/' + c.id)
+    );
   }
 }

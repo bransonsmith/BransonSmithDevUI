@@ -15,9 +15,29 @@ button {
     height: 200px;
     display: flex;
     flex-direction: column;
+    position: relative;
+    top: 80px;
+    padding-top: 30px;
+}
+.pw-label {
+    margin-left: calc(50% - 120px);
+    margin-top: 3px;
+}
+.password {
+    margin: 0px auto;
 }
 
 .validation {
     margin: auto;
     color: var(--red);
+}
+
+.submit-auth {
+    color: var(--accent-color);
+    border-color: var(--accent-color);
+}
+
+.demo-mode {
+    color: #925013;
+    border-color: #925013;
 }

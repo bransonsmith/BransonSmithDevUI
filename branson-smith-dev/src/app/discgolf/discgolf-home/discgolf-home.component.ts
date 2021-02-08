@@ -19,4 +19,8 @@ export class DiscgolfHomeComponent implements OnInit {
     this.route.navigateByUrl('discgolf/rounds');
   }
 
+  goToCourses() {
+    this.route.navigateByUrl('discgolf/courses');
+  }
+
 }

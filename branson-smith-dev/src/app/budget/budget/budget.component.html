@@ -1,10 +1,10 @@
 
 
-<div class="auth" *ngIf="!isAuth && !demoMode">
-    <input type="password" placeholder="password" [(ngModel)]="authInput">
-    <label for="password">password</label>
-    <button class="plain-button" (click)="attemptAuth()">Submit</button>
-    <button class="plain-button" (click)="getDemoData()">Continue in Demo Mode</button>
+<div class="card-container auth" *ngIf="!isAuth && !demoMode">
+    <input class="password" type="password" placeholder="password" [(ngModel)]="authInput">
+    <label class="pw-label" for="password">password</label>
+    <button class="plain-button submit-auth" (click)="attemptAuth()">Submit</button>
+    <button class="plain-button demo-mode" (click)="getDemoData()">Continue in Demo Mode</button>
     <div class="validation" *ngIf="failedAuth">Incorrect Password</div>
 </div>
 
