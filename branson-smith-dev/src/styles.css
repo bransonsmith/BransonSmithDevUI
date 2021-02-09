@@ -64,7 +64,9 @@ app-root {
     --header-height: 50px;
 
     --discgolf-birdie: #41ffbd;
-    --discgolf-eagle: #41ccff;
+    --discgolf-birdie-d: #2ead81;
+    --discgolf-par: #a5a5a5;
+    --discgolf-eagle: #6cfaff;
     --discgolf-bogey: #aa3e3e;
 }
 

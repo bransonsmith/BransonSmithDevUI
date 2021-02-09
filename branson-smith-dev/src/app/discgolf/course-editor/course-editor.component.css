@@ -26,8 +26,13 @@
     flex-direction: row;
     border: 1px solid var(--background);
     border-radius: 4px;
+    background-color: var(--accent-color-tt);
     padding-bottom: 2px;
-    margin: auto;
+    margin: 4px auto;
+}
+.course-row:hover {
+    cursor: pointer;
+    background-color: var(--accent-color);
 }
 
 .wide-details {

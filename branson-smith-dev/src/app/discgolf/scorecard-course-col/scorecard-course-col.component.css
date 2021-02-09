@@ -13,14 +13,13 @@
     background-color: var(--background-d);
     width: 59px;
     font-size: 9px;
-    border: 1px solid var(--content-font-color);
     border-bottom: 3px solid var(--content-font-color);
     box-shadow: 1px 2px 3px gray;
     padding: 2px;
-    height: 35px;
+    height: 45px;
 
     position: fixed;
-    top: 107px;
+    top: 105px;
 }
 
 .holes {
@@ -35,7 +34,6 @@
     flex-direction: column;
     width: calc(100% - 6px);
     font-size: 9px;
-    border: 1px solid var(--content-font-color);
     padding: 2px;
     height: 35px;
 }
@@ -47,6 +45,11 @@
     flex-direction: column;
     margin: auto;
 }
+.num {
+    font-size: 14px;
+    font-weight: bold;
+    margin: auto;
+}
 .info {
     height: 50%;
     width: 100%;
@@ -55,11 +58,5 @@
     margin: auto;
 }
 .par {
-    margin: auto;
-}
-
-.num {
-    font-size: 14px;
-    font-weight: bold;
     margin: auto;
 }

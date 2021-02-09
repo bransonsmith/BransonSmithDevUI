@@ -15,6 +15,9 @@ export class ScorecardPlayerColComponent implements OnInit {
   editingHole = false;
   holeBeingEdited: FilledOutPlayerHoleDto;
   editHoleForm;
+  startScore: number;
+  startDots: number;
+  startShots: string;
 
   constructor(
     private formBuilder: FormBuilder,
@@ -61,16 +64,26 @@ export class ScorecardPlayerColComponent implements OnInit {
   editHole(hole) {
     this.editingHole = true;
     this.holeBeingEdited = hole;
+    this.startScore = this.holeBeingEdited.score;
+    this.startDots = this.holeBeingEdited.dots;
+    this.startShots = this.holeBeingEdited.shots;
   }
 
   stopEditing() {
+    this.holeBeingEdited.score = this.startScore;
+    this.holeBeingEdited.dots = this.startDots;
+    this.holeBeingEdited.shots = this.startShots;
     this.editingHole = false;
     this.holeBeingEdited = null;
   }
 
   inc(field) {
     if (field === 'score') {
-      this.holeBeingEdited.score += 1;
+      if (this.holeBeingEdited.score === 0) {
+        this.holeBeingEdited.score = this.holeBeingEdited.hole.par;
+      } else {
+        this.holeBeingEdited.score += 1;
+      }
     }
     if (field === 'dots') {
       this.holeBeingEdited.dots += 1;
@@ -79,7 +92,11 @@ export class ScorecardPlayerColComponent implements OnInit {
 
   dec(field) {
     if (field === 'score') {
-      this.holeBeingEdited.score -= 1;
+      if (this.holeBeingEdited.score === 0) {
+        this.holeBeingEdited.score = this.holeBeingEdited.hole.par - 1;
+      } else {
+        this.holeBeingEdited.score += 1;
+      }
     }
     if (field === 'dots') {
       this.holeBeingEdited.dots -= 1;

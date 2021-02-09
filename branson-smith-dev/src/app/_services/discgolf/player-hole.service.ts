@@ -29,7 +29,7 @@ export class FilledOutPlayerHoleDto {
   hole: HoleDto;
   score: number;
   dots: number;
-  shots: number;
+  shots: string;
 }
 
 @Injectable({

@@ -1,77 +1,89 @@
 <div class="hole" *ngIf="hole.score === 0">
-    <div class="score">
-        <div class="score-text">
-            {{getScoreString()}}
+    <div class="hole-content">
+        <div class="score">
+            <div class="score-text">
+                {{getScoreString()}}
+            </div>
         </div>
-    </div>
-    <div class="dots" *ngIf="hole.dots > 0">
-        <app-discgolf-dots
-        [count]="hole.dots">
-        </app-discgolf-dots>
+        <div class="dots" *ngIf="hole.dots > 0">
+            <app-discgolf-dots
+            [count]="hole.dots">
+            </app-discgolf-dots>
+        </div>
     </div>
 </div>
 
 <div class="hole par" *ngIf="hole.score !== 0 && hole.score === hole.hole.par">
-    <div class="score">
-        <div class="score-text">
-            {{getScoreString()}}
+    <div class="hole-content">
+        <div class="score">
+            <div class="score-text">
+                {{getScoreString()}}
+            </div>
         </div>
-    </div>
-    <div class="dots">
-        <app-discgolf-dots
-        [count]="hole.dots">
-        </app-discgolf-dots>
+        <div class="dots" *ngIf="hole.dots > 0">
+            <app-discgolf-dots
+            [count]="hole.dots">
+            </app-discgolf-dots>
+        </div>
     </div>
 </div>
 
 <div class="hole birdie" *ngIf="hole.score > 1 && hole.score - hole.hole.par === -1">
-    <div class="score">
-        <div class="score-text">
-            {{getScoreString()}}
+    <div class="hole-content">
+        <div class="score">
+            <div class="score-text">
+                {{getScoreString()}}
+            </div>
         </div>
-    </div>
-    <div class="dots">
-        <app-discgolf-dots
-        [count]="hole.dots">
-        </app-discgolf-dots>
+        <div class="dots" *ngIf="hole.dots > 0">
+            <app-discgolf-dots
+            [count]="hole.dots">
+            </app-discgolf-dots>
+        </div>
     </div>
 </div>
 
 <div class="hole eagle" *ngIf="hole.score > 1 && hole.score - hole.hole.par === -2">
-    <div class="score">
-        <div class="score-text">
-            {{getScoreString()}}
+    <div class="hole-content">
+        <div class="score">
+            <div class="score-text">
+                {{getScoreString()}}
+            </div>
         </div>
-    </div>
-    <div class="dots">
-        <app-discgolf-dots
-        [count]="hole.dots">
-        </app-discgolf-dots>
+        <div class="dots" *ngIf="hole.dots > 0">
+            <app-discgolf-dots
+            [count]="hole.dots">
+            </app-discgolf-dots>
+        </div>
     </div>
 </div>
 
 <div class="hole ace" *ngIf="hole.score === 1">
-    <div class="score">
-        <div class="score-text">
-            {{getScoreString()}}
+    <div class="hole-content">
+        <div class="score">
+            <div class="score-text">
+                {{getScoreString()}}
+            </div>
         </div>
-    </div>
-    <div class="dots">
-        <app-discgolf-dots
-        [count]="hole.dots">
-        </app-discgolf-dots>
+        <div class="dots" *ngIf="hole.dots > 0">
+            <app-discgolf-dots
+            [count]="hole.dots">
+            </app-discgolf-dots>
+        </div>
     </div>
 </div>
 
 <div class="hole bogey" *ngIf="hole.score > 1 && hole.score > hole.hole.par">
-    <div class="score">
-        <div class="score-text">
-            {{getScoreString()}}
+    <div class="hole-content">
+        <div class="score">
+            <div class="score-text">
+                {{getScoreString()}}
+            </div>
         </div>
-    </div>
-    <div class="dots">
-        <app-discgolf-dots
-        [count]="hole.dots">
-        </app-discgolf-dots>
+        <div class="dots">
+            <app-discgolf-dots
+            [count]="hole.dots" *ngIf="hole.dots > 0">
+            </app-discgolf-dots>
+        </div>
     </div>
 </div>

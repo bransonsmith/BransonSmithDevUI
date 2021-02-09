@@ -40,6 +40,7 @@ import { ScorecardCourseColComponent } from './discgolf/scorecard-course-col/sco
 import { ScorecardPlayerColComponent } from './discgolf/scorecard-player-col/scorecard-player-col.component';
 import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.component';
 import { ContactComponent } from './contact/contact.component';
+import { DiscgolfNavComponent } from './discgolf/discgolf-nav/discgolf-nav.component';
 
 @NgModule({
   declarations: [
@@ -78,6 +79,7 @@ import { ContactComponent } from './contact/contact.component';
     ScorecardPlayerColComponent,
     PlayerHoleComponent,
     ContactComponent,
+    DiscgolfNavComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,15 +1,226 @@
 .contact {
-    width: 100%;
     display: flex;
     flex-direction: column;
+    width: fit-content;
+    margin: 0px auto 0px;
+    max-width: 94%;
+    padding-bottom: 100px;
 }
 
-.email {
-    margin: 80px auto 0px;
+.top-section {
+    display: flex;
+    margin: 40px auto;
+    border-radius: 8px;
+    background: linear-gradient(325deg, var(--accent-color-b),  var(--accent-color));
+    max-width: 400px;
+    min-width: 300px;
+    padding: 25px;
+    max-width: 90%;
 }
 
-.text {
-    font-size: 13px;
+h1 {
+    color: var(--gray);
+    margin: 0px;
+}
+.flexed {
+    width: 140px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.bg-image {
+    position: absolute;
+    top: 50px;
+    left: 0px;
+    opacity: .10;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    max-width: 100%;
+}
+.contact-container {
+    
+    position: absolute;
+    top: 100px;
+    left: 0px;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+}
+
+.info {
+    width: 100% - 180px;
+    margin-left: 20px;
+}
+
+.profile-pic {
+    width: 150px;
+    height: 150px;
+    min-width: 150px;
+    min-height: 150px;
+    border-radius: 100%;
+    margin-right: 30px;
+    max-width: 40%;
+    max-height: 40%;
+}
+
+.link-row {
+    display: flex;
+    height: 100%;
+    margin: auto 2px;
+    vertical-align: center;
+    width: fit-content;
+}
+
+.link-pic {
+    max-height: 55px;
+    max-width: 55px;
+    width: 55px;
+    margin: 10px;
+    margin-left: 0px;
+}
+
+.spacing {
+     max-width: 30px;
+     width: 5%;
+}
+
+.name {
+    margin: 0px 20px;
+    min-width: 150px;
+}
+
+.username {
+    margin: auto 0 auto 0;
+    font-weight: bold;
+}
+
+.message {
+    width: calc(94% - 40px);
+    height: fit-content;
+    padding: 24px 20px;
+    margin: 24px auto auto auto;
+
+    background-color: var(--background-d2);
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+    border-top: 4px solid var(--accent-color-b);
+    border-left: 4px solid var(--accent-color-b);
     text-align: center;
-    margin: 20px auto;
 }
+.email {
+    text-decoration: underline;
+}
+
+.links-list {
+    /* border-radius: 8px;
+    background: linear-gradient(10deg, var(--accent-color), var(--accent-color-b)); */
+    border: 1px solid var(--accent-color-bbb);
+    border-radius: 6px;
+    background: var(--primary-color-bbbb);
+    margin: 20px auto;
+    padding: 0px 10px;
+    width: fit-content;
+    max-width: 400px;
+    min-width: 300px;
+}
+.top-row {
+    display: flex;
+    max-width: 100%;
+}
+.links {
+    max-height: 300px;
+    max-width: 400px;
+    width: fit-content;
+    height: fit-content;
+}
+
+.link {
+    margin: auto 0 auto 0;
+}
+
+.flex-centered {
+    display: flex;
+    margin: 0px auto;
+}
+
+.submit-button {
+    display: flex;
+}
+.submit-text {
+    height: fit-content;
+    width: fit-content;
+    margin: auto;
+}
+
+
+.email-field {
+    padding: 4px;
+    margin: 20px;
+    margin-top: 30px;
+    height: 32px;
+    font-size: 18px;
+    width: 500px;
+    max-width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.782);
+}
+
+.send {
+    margin: 10px;
+}
+.message-field {
+    padding: 4px;
+    margin: 20px;
+    margin-top: 0px;
+    font-size: 18px;
+    width: 500px;
+    max-width: 90%;
+    border: 1px solid rgba(0, 0, 0, 0.308);
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.748);
+    background-color: var(--background-b);
+    color: var(--content-font-color-b);
+}
+.validation {
+    margin-top: 20px;
+    color: rgba(134, 47, 47, 0.691);
+}
+
+.thank-you {
+    background: var(--background-d2);
+    color: var(--content-font-color);
+    box-shadow: 3px 3px 6px rgba(33, 33, 33, 0.741);
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    min-width: 250px;
+    max-height: 50%;
+    max-width: 60%;
+    margin: auto;
+    text-align: center;
+    border-top: 4px solid var(--accent-color-b);
+    border-left: 4px solid var(--accent-color-b);
+}
+.ty-message{
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+}
+.ty-button {
+    margin: auto;
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+}
+.material-icons {
+    font-size: 40px;
+    line-height: 50px;
+    margin: 16px;
+    color: var(--accent-color-b);
+}
+

@@ -78,7 +78,8 @@ export class DiscgolfRoundAddComponent implements OnInit {
       course = this.courses.find(c => c.name === this.roundForm.value.roundCourse);
     }
     const courseId = course.id;
-    this.roundService.createFilledOutRound(courseId, this.players.map(p => p.id)).subscribe( r => {
+    const selectedPlayers = this.players.filter(p => p.selected);
+    this.roundService.createFilledOutRound(courseId, selectedPlayers.map(p => p.id)).subscribe( r => {
       this.goToRound(r);
     });
   }

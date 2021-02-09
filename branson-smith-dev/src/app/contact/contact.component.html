@@ -1,8 +1,52 @@
-<div class="contact">
-    <div class="email">
-        bransonsmith22@gmail.com
-    </div>
-    <div class="text">
-        Have an idea? I'd love to hear about it. Feel free to email me at the address above!
+<div id="top" class="contact-container" *ngIf="!sent()">
+    <div class="contact">
+
+        <div class="top-row flex-centered">
+    
+            <img class="profile-pic" src="../../../assets/profile.jpg" alt="Branson Smith">
+    
+            <div class="flexed">
+                <div class="links" *ngFor="let link of links">
+                    <a href="{{link.link}}">
+                        <img class="link-pic" src="{{getImage(link)}}" alt="{{link.name}}">
+                    </a>
+                </div>
+            </div>
+        </div>
+    
+    
+        <h1 class="name flex-centered">Branson Smith</h1>
+<!--     
+        <input type="email" placeholder="email address" class="email-field flex-centered" [(ngModel)]="emailTxt">
+        <textarea placeholder="message" class="message-field flex-centered" rows="12" [(ngModel)]="messageTxt"></textarea>
+        <button class="flex-centered submit-button" (click)="send()"> <div class="submit-text">Send</div> </button> -->
+        
+        <div class="message">
+            The best way to get in touch with me is with an email to me at: <div class="email">bransonsmith22@gmail.com</div> But if you'd like, you can also check out the links above.
+        </div>
+
+        <div class="validation" *ngIf="validationIsShowing()">
+            Ensure you've given a valid email address and filled in the message field.
+        </div>
     </div>
 </div>
+
+<div class="contact-container" *ngIf="sent()">
+    <div class="thank-you">
+        <div class="ty-message">
+            <h2>Thank You! You'll hear from me soon!</h2>
+            
+            <div class="row">
+                <i class="material-icons">
+                    emoji_people
+                </i>
+                <i class="material-icons">
+                    mail_outline
+                </i>
+            </div>
+        </div>
+        <button class="plain-button" (click)="routeHome()">Home</button>
+    </div>
+</div>
+
+<img src="../../../assets/contact-src.PNG" class="bg-image" alt="Background image of source code">

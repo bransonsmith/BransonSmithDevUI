@@ -1,0 +1,55 @@
+.discgolf-nav {
+    position: fixed;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    height: 50px;
+    border-top: 2px solid var(--accent-color-b2);
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-d2);
+    color: var(--discgolf-birdie-d);
+    z-index: 999;
+}
+
+.nav-button {
+    width: 20%;
+    height: 100%;
+    border-right: 1px ridge var(--background-b);
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-d2);
+}
+
+.top {
+    height: 75%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.nav-icon {
+    height: fit-content;
+    width: fit-content;
+    max-width: 32px;
+    max-height: 32px;
+    margin: auto auto 5px auto;
+}
+
+i {
+    height: fit-content;
+    padding: 0px;
+    margin: auto auto 5px auto;
+    color: var(--discgolf-birdie-d);
+}
+
+.bottom {
+    width: 100%;
+    height: 25%;
+    font-size: 10px;
+    color: var(--content-font-color);
+}
+
+.label {
+    margin: auto;
+}
