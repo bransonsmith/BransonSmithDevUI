@@ -53,3 +53,8 @@ i {
 .label {
     margin: auto;
 }
+
+.disabled {
+    color: gray;
+    background-color: rgb(68, 68, 68);
+}
