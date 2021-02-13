@@ -11,6 +11,7 @@ import { DiscgolfRoundComponent } from './discgolf/discgolf-round/discgolf-round
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { PlaygroundComponent } from './playground/playground.component';
+import { PokerEventHomeComponent } from './poker-event/poker-event-home/poker-event-home.component';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { UserComponent } from './user/user.component';
 
@@ -26,7 +27,8 @@ const routes: Routes = [
   { path: 'discgolf/rounds', component: DiscgolfRoundAddComponent },
   { path: 'discgolf/courses', component: CourseEditorComponent },
   { path: 'discgolf/courses/:id', component: CourseComponent },
-  { path: 'discgolf/rounds/:id', component: DiscgolfRoundComponent },
+  { path: 'discgolf', component: DiscgolfHomeComponent },
+  { path: 'cash', component: PokerEventHomeComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

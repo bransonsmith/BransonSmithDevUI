@@ -41,6 +41,7 @@ import { ScorecardPlayerColComponent } from './discgolf/scorecard-player-col/sco
 import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.component';
 import { ContactComponent } from './contact/contact.component';
 import { DiscgolfNavComponent } from './discgolf/discgolf-nav/discgolf-nav.component';
+import { PokerEventHomeComponent } from './poker-event/poker-event-home/poker-event-home.component';
 
 @NgModule({
   declarations: [
@@ -80,6 +81,7 @@ import { DiscgolfNavComponent } from './discgolf/discgolf-nav/discgolf-nav.compo
     PlayerHoleComponent,
     ContactComponent,
     DiscgolfNavComponent,
+    PokerEventHomeComponent,
   ],
   imports: [
     BrowserModule,

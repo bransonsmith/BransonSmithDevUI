@@ -1,0 +1,60 @@
+
+<div class="poker-event">
+
+    <div class="title-section">
+        <div class="title">Cypress Classic,</div>
+        <div class="title">Ice-Cold</div>
+        <div class="title">Cash Game</div>
+        <div class="subtitle">
+            <img src="../../../assets/Luis.JPG" class="luis">
+            <div class="sponsor"> <div class="powered">powered by </div>Luis Poker Productions</div>
+        </div>
+    </div>
+
+    <img src="../../../assets/Chips.JPG" class="chips">
+    <div class="basic-info-section">
+        <div class="detail">Thursday February 18, 2021</div>
+        <div class="detail date">6:00pm - 10:00pm</div>
+        <div class="blinds-section">
+            <div class="blinds">$ .25 / .50</div>
+            <div class="rake">0% Rake</div>
+        </div>
+    </div>
+         
+    <div class="everything-after-basic-info">
+        <div class="location-section">
+            <div class="detail location-label">location</div>
+            <div class="location-info">
+                We've rented out an exclusive, private table at the newly developed
+                 Avenues of Cypress in the soon to be legendary Smith-Suite. 
+                 A rival of the West Garagio Game Room and Spa, memories are manufactured 
+                 at places like this.
+            </div>
+            <div class="address" type="address">21500 Cypresswood Dr. Cypress, TX</div>
+        </div>
+    
+        <div class="highlight-players">
+            <div class="profile-title">
+                Player Profiles
+            </div>
+            <div class="profile-subtitle">
+                Here are some of our notable early sign ups...
+            </div>
+            <div class="player-profiles">
+                <div class="player-profile" *ngFor="let player of players">
+                    <img src="{{player.image}}" class="player-pic">
+                    <div class="player-info">
+                        <div class="player-name">{{player.name}}</div>
+                        <div class="player-bio">{{player.bio}}</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+
+</div>
+
+
+
