@@ -5,19 +5,19 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
+import { HeaderComponent } from './layout/header/header.component';
+import { FooterComponent } from './layout/footer/footer.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { PortfolioProjectPreviewComponent } from './portfolio-project-preview/portfolio-project-preview.component';
-import { PortfolioTagComponent } from './portfolio-tag/portfolio-tag.component';
-import { PortfolioTagsComponent } from './portfolio-tags/portfolio-tags.component';
-import { PortfolioMetaColumnComponent } from './portfolio-meta-column/portfolio-meta-column.component';
-import { PortfolioCtaBoxComponent } from './portfolio-cta-box/portfolio-cta-box.component';
-import { UserCreateComponent } from './user-create/user-create.component';
-import { UserLoginComponent } from './user-login/user-login.component';
-import { UserComponent } from './user/user.component';
+import { PortfolioComponent } from './portfolio/portfolio/portfolio.component';
+import { PortfolioProjectPreviewComponent } from './portfolio/portfolio-project-preview/portfolio-project-preview.component';
+import { PortfolioTagComponent } from './portfolio/portfolio-tag/portfolio-tag.component';
+import { PortfolioTagsComponent } from './portfolio/portfolio-tags/portfolio-tags.component';
+import { PortfolioMetaColumnComponent } from './portfolio/portfolio-meta-column/portfolio-meta-column.component';
+import { PortfolioCtaBoxComponent } from './portfolio/portfolio-cta-box/portfolio-cta-box.component';
+import { UserCreateComponent } from './user/user-create/user-create.component';
+import { UserLoginComponent } from './user/user-login/user-login.component';
+import { UserComponent } from './user/user/user.component';
 import { CookieService } from 'ngx-cookie-service';
 import { CategoryFormComponent } from './budget/category-form/category-form.component';
 import { BudgetComponent } from './budget/budget/budget.component';
@@ -42,6 +42,8 @@ import { PlayerHoleComponent } from './discgolf/player-hole/player-hole.componen
 import { ContactComponent } from './contact/contact.component';
 import { DiscgolfNavComponent } from './discgolf/discgolf-nav/discgolf-nav.component';
 import { PokerEventHomeComponent } from './poker-event/poker-event-home/poker-event-home.component';
+import { RedditAdComponent } from './swgoh/reddit-ad/reddit-ad.component';
+import { BounceInComponent } from './playground/mess-around/bounce-in/bounce-in.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +84,8 @@ import { PokerEventHomeComponent } from './poker-event/poker-event-home/poker-ev
     ContactComponent,
     DiscgolfNavComponent,
     PokerEventHomeComponent,
+    RedditAdComponent,
+    BounceInComponent,
   ],
   imports: [
     BrowserModule,

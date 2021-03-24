@@ -10,10 +10,12 @@ import { DiscgolfRoundAddComponent } from './discgolf/discgolf-round-add/discgol
 import { DiscgolfRoundComponent } from './discgolf/discgolf-round/discgolf-round.component';
 import { HomeComponent } from './home/home.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { BounceInComponent } from './playground/mess-around/bounce-in/bounce-in.component';
 import { PlaygroundComponent } from './playground/playground.component';
 import { PokerEventHomeComponent } from './poker-event/poker-event-home/poker-event-home.component';
-import { PortfolioComponent } from './portfolio/portfolio.component';
-import { UserComponent } from './user/user.component';
+import { PortfolioComponent } from './portfolio/portfolio/portfolio.component';
+import { RedditAdComponent } from './swgoh/reddit-ad/reddit-ad.component';
+import { UserComponent } from './user/user/user.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -29,6 +31,8 @@ const routes: Routes = [
   { path: 'discgolf/courses/:id', component: CourseComponent },
   { path: 'discgolf', component: DiscgolfHomeComponent },
   { path: 'cash', component: PokerEventHomeComponent },
+  { path: 'sw', component: RedditAdComponent },
+  { path: 'playground/bounce', component: BounceInComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   { path: '**', component: PageNotFoundComponent }
 ];

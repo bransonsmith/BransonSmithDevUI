@@ -2,8 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { LoginService } from '../_services/login.service';
-import { CreateUserDto, UserDto, UserService } from '../_services/user.service';
+import { LoginService } from '../../_services/login.service';
+import { CreateUserDto, UserDto, UserService } from '../../_services/user.service';
 
 @Component({
   selector: 'app-user-create',

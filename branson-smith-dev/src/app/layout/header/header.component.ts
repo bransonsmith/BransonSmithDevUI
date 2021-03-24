@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { Router } from '@angular/router';
 import { CookieService } from 'ngx-cookie-service';
-import { LoginService } from '../_services/login.service';
-import { UserService } from '../_services/user.service';
+import { LoginService } from '../../_services/login.service';
+import { UserService } from '../../_services/user.service';
 
 @Component({
   selector: 'app-header',

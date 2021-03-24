@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CookieService } from 'ngx-cookie-service';
-import { UserDto, UserService } from '../_services/user.service';
+import { UserDto, UserService } from '../../_services/user.service';
 
 @Component({
   selector: 'app-user',
