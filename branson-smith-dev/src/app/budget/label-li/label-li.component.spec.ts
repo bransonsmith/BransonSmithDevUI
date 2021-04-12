@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed, waitForAsync } from '@angular/core/testing';
 
 import { LabelLiComponent } from './label-li.component';
 
@@ -6,7 +6,7 @@ describe('LabelLiComponent', () => {
   let component: LabelLiComponent;
   let fixture: ComponentFixture<LabelLiComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(waitForAsync(() => {
     TestBed.configureTestingModule({
       declarations: [ LabelLiComponent ]
     })
