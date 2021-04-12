@@ -3,16 +3,19 @@
 
 html, body { 
     height: 100%;
+    min-height: 100%;
     font-family: 'Montserrat', sans-serif;
 }
 body {
     margin: 0;
     padding: 0;
-    background-color: var(--background);
+    min-height: 100%;
     color: var(--content-font-color);
+    background: radial-gradient(var(--background-b), var(--background-d2));
 }
 app-root {
     height: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
 }
@@ -51,8 +54,10 @@ app-root {
 
     --background:   #2C2C2E;
     --background-b: #3b3b3d;
+    --background-b2:#525255;
     --background-d: #212123;
     --background-d2: #111113;
+    --background-d3: #060607;
 
     --border-color: #000003;
     --border-color-b4: #555558; 

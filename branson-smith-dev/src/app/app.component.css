@@ -1,6 +1,8 @@
 .app-content {
     width: 100%;
-    min-height: 100%;
-    background-color: var(--background);
     padding-top: var(--header-height);
+}
+
+router-outlet {
+    min-height: 100%;
 }

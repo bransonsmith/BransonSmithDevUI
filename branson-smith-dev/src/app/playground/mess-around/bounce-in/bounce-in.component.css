@@ -1,0 +1,164 @@
+.bounce-in-page {
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    height: 390px;
+    background-color: gray;
+}
+
+.title-content {
+    height: 85%;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-top {
+    height: 48%;
+    margin-left: 15%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+.title-bot {
+    height: 48%;
+    margin-left: 35%;
+    margin-top: auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.title-text {
+    font-weight: bold;
+    font-size: 120px;
+}
+
+.content-section {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+}
+
+.summary-section {
+    width: 80%;
+    min-width: 300px;
+    margin: 0px auto 200px;
+    display: flex;
+    flex-direction: column;
+}
+
+.summary {
+    font-size: 32px;
+}
+
+.schedule-label {
+    padding-left: 1%;
+    margin: auto;
+    width: 80%;
+    max-width: 960px;
+    display: flex;
+    flex-direction: column;
+}
+
+.schedule-label-text {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+
+.animated {
+    animation-duration: 2.5s;
+    animation-fill-mode: both;
+    animation-iteration-count: 1;
+}
+  
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
+    40% {transform: translateY(-30px);}
+    60% {transform: translateY(-15px);}
+}
+.bounce {
+    animation-name: bounce;
+}
+
+
+
+.cash-game-section {
+    width: 80%;
+    height: 220px;
+    margin: 0px auto 300px auto;
+    display: flex;
+    flex-direction: row;
+    background-color: var(--background-d2);
+    box-shadow: 0px 0px 14px black;
+    border: black 4px solid;
+}
+
+.cash-game-title-box {
+    width: 35%;
+    height: 100%;
+    margin: 0px auto 0px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-d2);
+}
+
+.info-section {
+    width: 25%;
+    height: 100%;
+    margin: 0px auto 0px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--background-d);
+}
+.alt {
+    background-color: var(--background-b2);
+}
+
+.info-section-thin {
+    width: 15%;
+    height: 100%;
+    margin: 0px auto 0px 0px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--accent-color);
+}
+
+.info-content {
+    margin: auto;
+}
+
+.branding {
+    position: absolute;
+    left: 10%;
+    top: 300px;
+    display: flex;
+    flex-direction: row;
+}
+.luis-logo {
+    width: 250px;
+    height: 250px;
+    border-radius: 100%;
+    border: solid red 4px;
+    box-shadow: 0px 0px 32px red;
+}
+.branding-text {
+    margin-top: auto;
+    margin-bottom: 120px;
+    margin-left: 16px;
+    font-size: 16px;
+    color: red;
+}

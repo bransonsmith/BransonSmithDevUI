@@ -44,6 +44,7 @@ import { DiscgolfNavComponent } from './discgolf/discgolf-nav/discgolf-nav.compo
 import { PokerEventHomeComponent } from './poker-event/poker-event-home/poker-event-home.component';
 import { RedditAdComponent } from './swgoh/reddit-ad/reddit-ad.component';
 import { BounceInComponent } from './playground/mess-around/bounce-in/bounce-in.component';
+import { AboutSectionComponent } from './about/about-section/about-section.component';
 
 @NgModule({
   declarations: [
@@ -86,6 +87,7 @@ import { BounceInComponent } from './playground/mess-around/bounce-in/bounce-in.
     PokerEventHomeComponent,
     RedditAdComponent,
     BounceInComponent,
+    AboutSectionComponent
   ],
   imports: [
     BrowserModule,

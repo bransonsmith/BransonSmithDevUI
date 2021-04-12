@@ -1,68 +1,92 @@
-<div class="about">
-    <div class="about-page">
-        <div class="about-container">
-            
-            <div class="top">
-                <img class="me" src="../../../assets/profile.jpg">
-                <h1>about me</h1>
-            </div>
-            
-            <p class="p1">
-                I realized the amazing potential of programming in 2011 when one of my best friends helped me develop my first project on a Saturday night.
-                After that, getting a degree in Computer Science was an obvious choice.
-                Now I learn a variety of technologies and skills by constantly working on projects outside of work as well as
-                on enterprise financial service web applications at my job at IHS Markit.
-                My favorite projects are web apps because of the design potential and ease of access to make life easier for my self and others.
-                When my life was changed in 2017 by the grace of Jesus Christ I was motivated to begin looking for ways to use my skills to help others, 
-                and web development seemed like one of the most practical paths.
-                My mission is to develop with transparency and integrity.
-                <br>
-            </p>
+<div class="about-page">
+    <div class="about-container">
+        
+        <div class="top">
+            <img class="me" src="../../../assets/profile.jpg">
+            <h1>about me</h1>
+        </div>
 
-            <div class="mid">
-                <div class="mid-left">
-                    <img class="dev" src="../../../assets/dev_piper.JPG">
+        <div class="subtitle animated slide">
+            <div class="subtitle-text">
+                Branson Smith
+            </div>
+            <div class="subtitle-text">
+                Sr. Associate Software Developer @ IHS Markit
+            </div>
+        </div>
+
+        <div class="content">
+
+            <app-about-section 
+                [title]="'Values'"
+                [timeBeforeLoad]="3500"
+            ></app-about-section>
+
+            <div class="section work">
+                <div class="section-title">Work</div>
+                <div class="section-content work-content">
+                    I realized the amazing potential of programming in 2011 when one of my best friends helped me develop my first project on a Saturday night.
+                    After that, getting a degree in Computer Science was an obvious choice.
+                    Now, between work and home, I am always adding to the technologies, tools, and skills in my toolbelt.
+                    At work now, I spend most of my time on enterprise financial service web applications. Which includes web dev, dev ops, and cloud development.
+                    Right now for fun, my favorite projects are web apps because of their accessibility and visual components.
+                </div>
+                <div class="work-triangles">
+                    <img class="triangle" src="../../../assets/Baylor Triangle.png">
+                    <img class="triangle" src="../../../assets/BS Triangle.png">
+                    <img class="triangle" src="../../../assets/IHS Triangle.png">
                 </div>
                 
-                <div class="mid-right">
-                    <p class="p2"> 
-                        <br>
-                        Outside of programming, I enjoy spending time with my loving wife and our loyal dog. 
+            </div>
+
+            <div class="section play">
+                <div class="section-title">Play</div>
+                <div class="section-content">
+                    <div class="mid-left">
+                        <div class="carousel-button" (click)="decCarousel()">
+                            <i class="material-icons">Chevron Left</i>
+                        </div>
+                        <div class="carousel-image" *ngFor="let image of carouselImages;">
+                            <img class="dev" src="{{image.path}}" *ngIf="carouselIndex === image.index">
+                        </div>
+                        <div class="carousel-button" (click)="incCarousel()">
+                            <i class="material-icons">Chevron Right</i>
+                        </div>
+                    </div>
+                    Outside of programming, I enjoy spending time with my loving wife and our loyal dog. 
                         We were both born and raised in Texas, where we still live now.
                         We love taking our dog for walks, going on hikes, and spending time with friends and family. 
                         Some of my hobbies include Programming of course, all kinds of Sports, Video Games, Volunteering, and occasionally helping with A/V Event Production.
-                    </p>
-                    
+
+                    <div class="bot">
+                        <div class="hobbies">
+                                <img class="hobby" src="../../../assets/event.JPG">
+                                <img class="hobby" src="../../../assets/rocket-league.PNG">
+                                <img class="hobby" src="../../../assets/bs-logo-transparent.png">
+                                <img class="hobby" src="../../../assets/tree.jpg">
+                        </div>
+                        <div class="icons">
+                            <i class="material-icons">
+                                pets
+                            </i>
+                            <i class="material-icons">
+                                favorite
+                            </i>
+                            <i class="material-icons">
+                                sports_esports
+                            </i>
+                            <i class="material-icons">
+                                sports_golf
+                            </i>
+                            <i class="cross">
+                                <div class="vert"></div>
+                                <div class="horz"></div>
+                            </i>
+                        </div>
+                    </div>
                 </div>
             </div>
-            
-            
-            <div class="bot">
-                <div class="hobbies">
-                        <img class="hobby" src="../../../assets/event.JPG">
-                        <img class="hobby" src="../../../assets/rocket-league.PNG">
-                        <img class="hobby" src="../../../assets/bs-logo-transparent.png">
-                        <img class="hobby" src="../../../assets/tree.jpg">
-                </div>
-                <div class="icons">
-                    <i class="material-icons">
-                        pets
-                    </i>
-                    <i class="material-icons">
-                        favorite
-                    </i>
-                    <i class="material-icons">
-                        sports_esports
-                    </i>
-                    <i class="material-icons">
-                        sports_golf
-                    </i>
-                    <i class="cross">
-                        <div class="vert"></div>
-                        <div class="horz"></div>
-                    </i>
-                </div>
-            </div>
-    </div>
+
+        </div>
     </div>
 </div>
