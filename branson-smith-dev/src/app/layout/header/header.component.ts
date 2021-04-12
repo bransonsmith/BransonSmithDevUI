@@ -11,8 +11,8 @@ import { UserService } from '../../_services/user.service';
 })
 export class HeaderComponent implements OnInit {
 
-  @ViewChild('container', { static: false }) container;
-  @ViewChild('expandButton', { static: false }) expandButton;
+  @ViewChild('container') container;
+  @ViewChild('expandButton') expandButton;
   isMenuExpanded = false;
   tokenCookie;
   username;
