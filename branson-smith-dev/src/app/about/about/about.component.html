@@ -30,52 +30,47 @@
                     Now, between work and home, I am always adding to the technologies, tools, and skills in my toolbelt.
                     At work now, I spend most of my time on enterprise financial service web applications. Which includes web dev, dev ops, and cloud development.
                     Right now for fun, my favorite projects are web apps because of their accessibility and visual components.
+                    <div class="work-triangles">
+                        <img class="triangle" src="../../../assets/Baylor Triangle.png">
+                        <img class="triangle" src="../../../assets/BS Triangle.png">
+                        <img class="triangle" src="../../../assets/IHS Triangle.png">
+                    </div>
                 </div>
-                <div class="work-triangles">
-                    <img class="triangle" src="../../../assets/Baylor Triangle.png">
-                    <img class="triangle" src="../../../assets/BS Triangle.png">
-                    <img class="triangle" src="../../../assets/IHS Triangle.png">
-                </div>
-                
             </div>
 
             <div class="section play">
                 <div class="section-title">Play</div>
                 <div class="section-content">
-                    <div class="mid-left">
-                        <div class="carousel-button" (click)="decCarousel()">
-                            <i class="material-icons">Chevron Left</i>
-                        </div>
-                        <div class="carousel-image" *ngFor="let image of carouselImages;">
-                            <img class="dev" src="{{image.path}}" *ngIf="carouselIndex === image.index">
-                        </div>
-                        <div class="carousel-button" (click)="incCarousel()">
-                            <i class="material-icons">Chevron Right</i>
-                        </div>
-                    </div>
-                    Outside of programming, I enjoy spending time with my loving wife and our loyal dog. 
+                    
+                        Outside of programming, I enjoy spending time with my loving wife and our loyal dog.
                         We were both born and raised in Texas, where we still live now.
-                        We love taking our dog for walks, going on hikes, and spending time with friends and family. 
-                        Some of my hobbies include Programming of course, all kinds of Sports, Video Games, Volunteering, and occasionally helping with A/V Event Production.
-
-                    <div class="bot">
-                        <div class="hobbies">
-                                <img class="hobby" src="../../../assets/event.JPG">
-                                <img class="hobby" src="../../../assets/rocket-league.PNG">
-                                <img class="hobby" src="../../../assets/bs-logo-transparent.png">
-                                <img class="hobby" src="../../../assets/tree.jpg">
+                        We love taking walks and hikes, playing games, and spending time with friends and family.
+                        Some of my hobbies include programming, all kinds of sports, video games, camping and fishing, and helping out with our local church.
+                    <div class="carousel">
+                            <div class="carousel-button" (click)="decCarousel()">
+                                <i class="material-icons corousel-icon">chevron_left</i>
+                            </div>
+                            <div class="carousel-image-space">
+                                <span *ngFor="let image of carouselImages;">
+                                    <img class="carousel-image" src="{{image.path}}" *ngIf="carouselIndex === image.index">
+                                </span>
+                            </div>
+                            <div class="carousel-button" (click)="incCarousel()">
+                                <i class="material-icons corousel-icon">chevron_right</i>
+                            </div>
                         </div>
+                        <div class="bot">
                         <div class="icons">
-                            <i class="material-icons">
+                            <i class="material-icons hobby-icon">
                                 pets
                             </i>
-                            <i class="material-icons">
+                            <i class="material-icons hobby-icon">
                                 favorite
                             </i>
-                            <i class="material-icons">
+                            <i class="material-icons hobby-icon">
                                 sports_esports
                             </i>
-                            <i class="material-icons">
+                            <i class="material-icons hobby-icon">
                                 sports_golf
                             </i>
                             <i class="cross">

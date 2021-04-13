@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { MatCarousel, MatCarouselComponent } from '@ngbmodule/material-carousel';
 
 @Component({
   selector: 'app-about',
@@ -10,9 +9,11 @@ export class AboutComponent implements OnInit {
 
   carouselIndex = 0;
   carouselImages = [
-    { index: 0, path: '../../../assets/dev_piper.JPG'},
-    { index: 1, path: '../../../assets/bsdevCool.PNG'},
-    { index: 2, path: '../../../assets/Career.PNG'},
+    { index: 0, path: '../../../assets/beach.jpeg'},
+    { index: 1, path: '../../../assets/dev_piper.JPG'},
+    { index: 2, path: '../../../assets/kids.JPG'},
+    { index: 3, path: '../../../assets/piper.JPG'},
+    { index: 4, path: '../../../assets/graduation.JPG'},
   ];
 
   constructor() { }

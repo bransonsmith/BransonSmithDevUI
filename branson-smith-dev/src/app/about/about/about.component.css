@@ -61,28 +61,12 @@ h1 {
     flex-direction: column;
 }
 
-.work-triangles {
-    display: flex;
-    margin: auto;
-    opacity: .7;
-    z-index: 1;
-    padding-top: 20px;
-}
-.triangle {
-    width: 200px;
-    height: 200px;
-    display: flex;
-}
-.work-content {
-    position: relative;
-    z-index: 10;
-}
 
 .section {
     margin-top: 100px;
     width: 100%;
     padding-top: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 10px;
     padding-left: 60px;
     background-color: var(--background-d2);
     border-radius: 10px;
@@ -107,6 +91,24 @@ h1 {
     border-left: 3px solid var(--accent-color-b2);
 }
 
+.work-triangles {
+    display: flex;
+    margin: auto;
+    opacity: .9;
+    z-index: 1;
+    padding-top: 20px;
+    padding-bottom: 50px;
+    width: 80%;
+}
+.triangle {
+    width: 33%;
+    display: flex;
+}
+.work-content {
+    position: relative;
+    z-index: 10;
+}
+
 .emphasized {
     font-weight: bold;
     color: var(--accent-color-b2);
@@ -127,6 +129,28 @@ h1 {
     animation-name: bounce;
 }
 
+.carousel {
+    display: flex;
+    flex-direction: row;
+    width: 500px;
+    height: 280px;
+    max-width: 95%;
+    margin: 0px auto;
+    padding: 20px 0px;
+    /* border: 2px solid var(--accent-color-b2); */
+}
+.carousel-image-space {
+    display: flex;
+    margin: auto;
+    height: 100%;
+}
+.carousel-image {
+    display: flex;
+    margin: auto;
+    max-width: 240px;
+    max-height: 100%;
+    border-radius: 10px;
+}
 .carousel-button {
     height: 40px;
     width: 40px;
@@ -136,38 +160,38 @@ h1 {
     box-shadow: 0px 0px 6px var(--accent-color-b2);
     color: var(--primary-color);
     border-radius: 100%;
+    margin: auto 10px;
 }.carousel-button:hover {
     cursor: pointer;
     box-shadow: 0px 0px 9px var(--accent-color-b);
     background-color: var(--accent-color-b3);
 }
-
+.corousel-icon {
+    margin: auto;
+    font-size: 24px;
+    font-weight: bold;
+    color: var(--accent-color-b3);
+}
+/* 
 .dev {
     max-width: 220px;
     border-radius: 10px;
     margin: auto auto auto 0px;
-}
+} */
 
 .icons {
     width: fit-content;
     margin: 60px auto 0px;
     display: flex;
     flex-direction: row;
-}
-.material-icons {
-    margin: 20px auto;
+    padding-bottom: 40px;
 }
 
-.mid-left {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-}
 .p2 {
     margin: 0px auto auto;
     padding: 0px 0px 0px 30px;
 }
-.material-icons {
+.hobby-icon {
     margin: 0 30px;
     font-size: 32px;
 }
@@ -232,17 +256,24 @@ h1 {
 @media screen and (max-width: 665px) {
     
     .me {
-        position: flex;
-        border-radius: 10px;
-        height: 110px;
-        width: 110px;
-        border: 3px solid white;
-        box-shadow: 0px 0px 12px white;
-        margin: auto;
+        top: 105%;
+        height: 100px;
+        width: 100px;
+        border-radius: 100%;
+    }
+    .subtitle {
+        margin-left: 35%;
     }
     .content {
         width: calc(100%);
         padding: 100px 0px 25px;
+    }
+    .section {
+        max-width: calc(100% - 60px);
+    }
+    app-about-section{
+        max-width: calc(100% - 60px);
+
     }
     .subtitle {
         position: relative;
@@ -292,11 +323,9 @@ h1 {
         display: flex;
         flex-direction: row;
     }
-    .material-icons {
-        margin: 15px;
-    }
     .cross {
         margin: 15px;
+        margin-top: 0px;
         padding-left: 0px;
     }
 }
