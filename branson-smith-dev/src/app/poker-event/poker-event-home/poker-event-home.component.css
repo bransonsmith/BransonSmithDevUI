@@ -1,8 +1,10 @@
 .poker-event {
     height: 100%;
     width: 100%;
+    max-width: 500px;
     display: flex;
     flex-direction: column;
+    margin: 0px auto;
 }
 
 .title-section {
@@ -55,6 +57,7 @@
 .chips {
     height: 200px;
     width: 100%;
+    max-width: 500px;
     background: url("../../../assets/Chips.JPG");
     opacity: .2;
     text-shadow: 0px 0px 2px black;
