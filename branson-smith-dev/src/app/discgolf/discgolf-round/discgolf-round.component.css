@@ -11,6 +11,8 @@
     top: 50px;
     z-index: 100;
     color: black;
+    max-width: 500px;
+    margin: 0px auto;
 }
 
 .title {
@@ -24,6 +26,7 @@
     margin: auto;
     display: flex;
     flex-direction: row;
+    max-width: 500px;
 }
 
 .subtitle {
@@ -78,6 +81,7 @@ i {
     display: flex;
     flex-direction: column;
     width: 100%;
+    max-width: 500px;
 }
 
 .holes-section {

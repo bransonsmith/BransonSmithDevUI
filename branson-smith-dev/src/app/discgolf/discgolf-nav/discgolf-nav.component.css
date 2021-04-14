@@ -1,7 +1,4 @@
 .discgolf-nav {
-    position: fixed;
-    bottom: 0px;
-    left: 0px;
     width: 100%;
     height: 50px;
     border-top: 2px solid var(--accent-color-b2);
@@ -10,6 +7,10 @@
     background-color: var(--background-d2);
     color: var(--discgolf-birdie-d);
     z-index: 999;
+    max-width: 500px;
+    margin: auto auto 0px;
+    position: fixed;
+    bottom: 0px;
 }
 
 .nav-button {
@@ -57,4 +58,11 @@ i {
 .disabled {
     color: gray;
     background-color: rgb(68, 68, 68);
+}
+
+
+@media screen and (min-width: 500px) {
+    .discgolf-nav {
+        left: calc(50% - 250px);
+    }
 }
